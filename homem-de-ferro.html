@@ -35,18 +35,40 @@
             position: relative;
         }
 
-        /* FUNDO FIXO IMERSIVO COM AS 3 ARTES DO HOMEM DE FERRO BEM POSICIONADAS */
-        .bg-fixed-1, .bg-fixed-2, .bg-fixed-3 {
+        /* ------------------------------------------------ */
+        /* CORREÇÃO DAS FOTOS DE FUNDO: NAS MARGENS LATERAIS */
+        /* ------------------------------------------------ */
+        .bg-side-left-top, .bg-side-right-mid, .bg-side-left-bottom {
             position: fixed;
-            z-index: -1;
-            opacity: 0.35;
+            z-index: 0; /* Acima do preto do body, mas abaixo do texto */
+            opacity: 0.85; /* Bem visíveis, nada apagadas */
             pointer-events: none;
-            filter: drop-shadow(0 0 30px rgba(255, 30, 39, 0.9));
+            filter: drop-shadow(0 0 20px rgba(255, 30, 39, 0.8));
         }
 
-        .bg-fixed-1 { top: 8vh; left: -30px; width: 290px; transform: rotate(-10deg); }
-        .bg-fixed-2 { top: 45vh; right: -30px; width: 300px; transform: rotate(10deg); }
-        .bg-fixed-3 { bottom: 8vh; left: -30px; width: 290px; transform: rotate(-5deg); }
+        /* Imagem 1: Lado esquerdo no topo */
+        .bg-side-left-top {
+            top: 15vh;
+            left: -15px;
+            width: 110px;
+            transform: rotate(-10deg);
+        }
+
+        /* Imagem 2: Lado direito no meio */
+        .bg-side-right-mid {
+            top: 45vh;
+            right: -15px;
+            width: 115px;
+            transform: rotate(10deg);
+        }
+
+        /* Imagem 3: Lado esquerdo mais abaixo */
+        .bg-side-left-bottom {
+            top: 75vh;
+            left: -15px;
+            width: 110px;
+            transform: rotate(-5deg);
+        }
 
         .cabecalho-loja {
             background-color: #000000;
@@ -102,13 +124,14 @@
             50% { opacity: 0.8; }
         }
 
+        /* CONTAINER CENTRAL COM TRANSPARENÇA LEVE PARA AS ARTES APARECEREM NAS BORDAS */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 10;
-            background: rgba(3, 5, 8, 0.95);
+            background: rgba(3, 5, 8, 0.90);
             box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.98);
         }
 
@@ -156,7 +179,7 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* PALCO PRINCIPAL COM EFEITO DE LABORATÓRIO / LASER */
+        /* PALCO PRINCIPAL COM O NOVO DESIGN E EFEITO LASER/LABORATÓRIO */
         .hero-stage {
             position: relative;
             background: radial-gradient(circle at 50% 50%, #1a2a48 0%, #0d1222 50%, #05070a 100%);
@@ -209,7 +232,6 @@
             font-weight: 600;
         }
 
-        /* PREÇO CORRIGIDO PARA O NOVO VALOR DE R$ 187,50 */
         .price-current {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
@@ -451,10 +473,10 @@
 </head>
 <body>
 
-    <!-- AS 3 IMAGENS DE FUNDO RESTAURADAS COM SUCESSO -->
-    <img src="20260927_123840_0000.png" class="bg-fixed-1" alt="Fundo Iron 1">
-    <img src="1_20260927_123655_0000.png" class="bg-fixed-2" alt="Fundo Iron 2">
-    <img src="2_20260927_123655_0001.png" class="bg-fixed-3" alt="Fundo Iron 3">
+    <!-- AS 3 IMAGENS DE FUNDO POSICIONADAS NAS MARGENS LATERAIS (SEM COBRIR O TEXTO) -->
+    <img src="20260927_123840_0000.png" class="bg-side-left-top" alt="Fundo Iron Esquerda">
+    <img src="1_20260927_123655_0000.png" class="bg-side-right-mid" alt="Fundo Iron Direita">
+    <img src="2_20260927_123655_0001.png" class="bg-side-left-bottom" alt="Fundo Iron Inferior">
 
     <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
@@ -476,14 +498,13 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- PALCO PRINCIPAL -->
+        <!-- PALCO PRINCIPAL COM EFEITO DE CENA DE LABORATÓRIO / LASER -->
         <div class="hero-stage">
             <img src="Design sem nome_20260927_152912_0000.png" alt="Capy Stark Art Toys - Design Especial">
         </div>
 
         <div class="price-box">
-            <div class="price-old">De R$ 289,00</div>
-            <!-- PREÇO ATUALIZADO PARA R$ 187,50 CONFORME O SOLICITADO -->
+            <div class="price-old">R$ 289,90</div>
             <div class="price-current">Por R$ 187,50</div>
             <div class="price-installment">ou 12x de R$ 18,75 no cartão de crédito</div>
 
@@ -554,16 +575,4 @@
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Rafael" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Rafael O.</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Nota 10/10! Encaixe perfeito das peças, cores vivas e o design é único. Vale cada centavo investido."</p>
-            </div>
-        </div>
-
-        <div class="guarantee-box">
-            <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
-          
+                    <img src="https://images.unsplash.com/
