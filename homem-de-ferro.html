@@ -11,7 +11,7 @@
 
     <style>
         :root {
-            --bg-dark: #05070a;
+            --bg-dark: #030406;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
             --green-success: #00e676;
@@ -26,7 +26,6 @@
             font-family: 'Rajdhani', sans-serif;
         }
 
-        /* FUNDO GERAL DA PÁGINA */
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
@@ -35,33 +34,31 @@
             position: relative;
         }
 
-        /* EFEITO DE FUNDO IMERSIVO COM AS 3 IMAGENS FIXAS NAS LATERAIS */
+        /* FUNDO FIXO IMERSIVO - FORÇANDO A EXIBIÇÃO VISÍVEL DAS ARTES */
         .bg-iron-1, .bg-iron-2, .bg-iron-3 {
             position: fixed;
             z-index: -1;
-            opacity: 0.50;
+            opacity: 0.65;
             pointer-events: none;
-            filter: drop-shadow(0 0 20px rgba(255, 30, 39, 0.8));
+            filter: drop-shadow(0 0 25px rgba(255, 30, 39, 0.9));
         }
 
         .bg-iron-1 {
-            top: 5vh;
-            left: -40px;
-            width: 320px;
-            transform: rotate(-10deg);
+            top: 2vh;
+            left: -20px;
+            width: 300px;
         }
 
         .bg-iron-2 {
-            top: 38vh;
-            right: -50px;
-            width: 340px;
-            transform: rotate(10deg);
+            top: 45vh;
+            right: -20px;
+            width: 320px;
         }
 
         .bg-iron-3 {
-            bottom: 5vh;
-            left: -40px;
-            width: 320px;
+            bottom: 2vh;
+            left: -20px;
+            width: 300px;
         }
 
         .cabecalho-loja {
@@ -118,16 +115,15 @@
             50% { opacity: 0.8; }
         }
 
-        /* CONTAINER CENTRAL COM LEVE TRANSPARÊNCIA PARA EXIBIR O FUNDO */
+        /* CONTAINER CENTRAL COM FUNDO MAIS ESCURO E SÓLIDO PARA REALÇAR O FUNDO NAS LATERAIS */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(5, 7, 10, 0.75);
-            backdrop-filter: blur(2px);
-            box-shadow: 0 0 50px 30px rgba(5, 7, 10, 0.85);
+            background: rgba(3, 4, 6, 0.82);
+            box-shadow: 0 0 60px 40px rgba(3, 4, 6, 0.95);
         }
 
         .badge {
@@ -431,7 +427,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(5, 7, 10, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(3, 4, 6, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -473,7 +469,7 @@
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- AS 3 NOVAS IMAGENS DO HOMEM DE FERRO FIXADAS NO FUNDO -->
+    <!-- AS 3 IMAGENS DE FUNDO CORRIGIDAS E COM ALTA VISIBILIDADE -->
     <img src="100699.jpg" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
     <img src="100698.jpg" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
     <img src="100697.jpg" class="bg-iron-3" alt="Homem de Ferro Fundo Inferior">
@@ -587,4 +583,12 @@
 
         <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">COMPRAR COM DESCONTO AGORA</a>
 
-        <
+        <footer>
+            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
+            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
