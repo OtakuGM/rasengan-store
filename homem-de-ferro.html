@@ -26,7 +26,6 @@
             font-family: 'Rajdhani', sans-serif;
         }
 
-        /* CORPO DA PÁGINA TOTALMENTE ESCURO PARA DAR DESTAQUE */
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
@@ -35,37 +34,35 @@
             position: relative;
         }
 
-        /* FUNDO COM POSIÇÃO ABSOLUTA DISTRIBUÍDA AO LONGO DA PÁGINA INTEIRA */
-        .bg-iron-1, .bg-iron-2, .bg-iron-3 {
+        /* PAINÉIS LATERAIS DECORATIVOS: GARANTEM QUE NUNCA SUMAM E FIQUEM BEM VISÍVEIS */
+        .side-armor-left, .side-armor-right {
             position: absolute;
-            z-index: 0;
-            opacity: 0.95; /* Super visíveis, nada transparentes */
+            top: 150px;
+            width: 140px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 400px;
             pointer-events: none;
-            filter: drop-shadow(0 0 40px rgba(255, 30, 39, 1)) drop-shadow(0 0 20px rgba(255, 183, 0, 0.7));
         }
 
-        /* 1. Primeira imagem no Topo Esquerdo */
-        .bg-iron-1 {
-            top: 50px;
-            left: -20px;
-            width: 280px;
-            transform: rotate(-10deg);
+        .side-armor-left {
+            left: 5px;
         }
 
-        /* 2. Segunda imagem no Meio Direito */
-        .bg-iron-2 {
-            top: 750px;
-            right: -20px;
-            width: 290px;
-            transform: rotate(10deg);
+        .side-armor-right {
+            right: 5px;
+            top: 300px;
         }
 
-        /* 3. Terceira imagem mais abaixo na Esquerda */
-        .bg-iron-3 {
-            top: 1550px;
-            left: -20px;
-            width: 290px;
-            transform: rotate(-5deg);
+        .side-armor-left img, .side-armor-right img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            opacity: 1; /* 100% visível, zero transparência */
+            border: 2px solid var(--stark-red);
+            box-shadow: 0 0 25px rgba(255, 30, 39, 0.95), 0 0 10px rgba(255, 183, 0, 0.7);
+            background: #000;
         }
 
         .cabecalho-loja {
@@ -122,15 +119,15 @@
             50% { opacity: 0.8; }
         }
 
-        /* CONTAINER CENTRAL COM FUNDO TOTALMENTE OPACO PARA O TEXTO FICAR LIMPO E LEGÍVEL */
+        /* CONTAINER CENTRAL OPACO E BEM DESTACADO NO MEIO */
         .container {
-            max-width: 600px;
+            max-width: 580px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
-            z-index: 1;
-            background: #05070a;
-            box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.95);
+            z-index: 10;
+            background: #030406;
+            box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.98);
         }
 
         .badge {
@@ -434,7 +431,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(5, 7, 10, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(3, 4, 6, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -462,26 +459,34 @@
             font-size: 0.85rem;
             color: var(--text-muted);
         }
+
+        /* Oculta as imagens laterais em telas super pequenas de celular para não apertar o texto central, mas mantendo-as visíveis e gigantes em tablets/PC */
+        @media (max-width: 420px) {
+            .side-armor-left, .side-armor-right {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- AS 3 IMAGENS ESPALHADAS E BEM VISÍVEIS AO LONGO DA PÁGINA -->
-    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
-    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
-    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo Esquerda Inferior">
-
-    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
-    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- CONTEÚDO DA PÁGINA -->
+    <div class="side-armor-left">
+        <img src="20260927_123840_0000.png" alt="Homem de Ferro Esquerda 1">
+        <img src="2_20260927_123655_0001.png" alt="Homem de Ferro Esquerda 2">
+    </div>
+
+    <div class="side-armor-right">
+        <img src="1_20260927_123655_0000.png" alt="Homem de Ferro Direita 1">
+    </div>
+
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -491,7 +496,6 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -517,7 +521,6 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
-        <!-- SEÇÃO DOS 2 VÍDEOS -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -538,14 +541,12 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
-        <!-- Galeria de Imagens -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
-        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
@@ -584,4 +585,5 @@
         </div>
 
         <div class="guarantee-box">
-            <h3>🔰 GARANTIA
+            <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
+            <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu
