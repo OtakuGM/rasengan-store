@@ -166,7 +166,6 @@
             overflow: hidden;
         }
 
-        /* PALCO PRINCIPAL COM A IMAGEM CORRETA DO BONECO MONTAGEM */
         .hero-stage img {
             width: 100%;
             height: auto;
@@ -346,25 +345,14 @@
             border-radius: 10px;
         }
 
-        .action-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .action-gallery img {
+        /* ESTILO DA ÚNICA FOTO DE DESTAQUE SUBSTITUINDO A GALERIA ANTIGA */
+        .single-highlight-image {
             width: 100%;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            object-fit: cover;
-            aspect-ratio: 1;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-        }
-
-        .action-gallery img:first-child {
-            grid-column: 1 / -1;
-            aspect-ratio: 16/9;
+            border-radius: 12px;
+            border: 2px solid var(--stark-gold);
+            margin-bottom: 30px;
+            display: block;
+            box-shadow: 0 0 25px rgba(255, 183, 0, 0.3);
         }
 
         .reviews-section { margin-bottom: 40px; }
@@ -445,7 +433,7 @@
 </head>
 <body>
 
-    <!-- AS 3 IMAGENS DE FUNDO CORRETAS -->
+    <!-- AS 3 IMAGENS DE FUNDO -->
     <img src="20260927_123840_0000.png" class="bg-fixed-1" alt="Fundo Iron 1">
     <img src="1_20260927_123655_0000.png" class="bg-fixed-2" alt="Fundo Iron 2">
     <img src="2_20260927_123655_0001.png" class="bg-fixed-3" alt="Fundo Iron 3">
@@ -470,7 +458,7 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- Palco Principal com a imagem correta do boneco montado -->
+        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="20260927_013805_0000.png" alt="Capy Stark Art Toys - Boneco Montado">
         </div>
@@ -501,7 +489,7 @@
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
             </div>
-            <div class="stark-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precisão."</div>
+            <div class="stark-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precision."</div>
 
             <div class="video-card">
                 <video src="lv_0_20260927120831.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -512,18 +500,13 @@
         <h2 class="section-title">Nível Gênios de Detalhes</h2>
         <p class="desc-text">Fabricado com polímeros de alta resistência, pintura automotiva e peças magnéticas/encaixáveis que transformam a capivara na máquina de combate definitiva.</p>
         
-        <!-- Imagem de detalhes esquemáticos com o nome correto .jpg -->
         <img src="1790518777125.jpg" class="info-image" alt="Detalhes e Peças do Capy Stark Art Toys">
 
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
-        <!-- GALERIA COM OS NOMES CERTOS -->
-        <div class="action-gallery">
-            <img src="20260927_013805_0000.png" alt="Capy Stark - Visão Completa da Armadura">
-            <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
-            <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
-        </div>
+        <!-- SUBSTITUIÇÃO FEITA: ÚNICA FOTO EXATA DA SUA ESCOLHA -->
+        <img src="Screenshot_2026-09-27-14-35-05-307_com.alibaba.aliexpresshd.png" class="single-highlight-image" alt="Capy Stark - Exibição Premium">
 
         <!-- AVALIAÇÕES -->
         <div class="reviews-section">
@@ -572,4 +555,10 @@
 
         <footer>
             <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
-     
+            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
