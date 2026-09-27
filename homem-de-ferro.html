@@ -14,6 +14,7 @@
             --bg-dark: #000000;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
+            --arc-cyan: #00f0ff;
             --green-success: #00e676;
             --text-main: #f0f4f8;
             --text-muted: #94a3b8;
@@ -34,7 +35,7 @@
             position: relative;
         }
 
-        /* FUNDO FIXO IMERSIVO COM AS ARTES DO HOMEM DE FERRO */
+        /* FUNDO FIXO IMERSIVO */
         .bg-fixed-1, .bg-fixed-2, .bg-fixed-3 {
             position: fixed;
             z-index: -1;
@@ -91,9 +92,9 @@
         }
 
         @keyframes armorEnergyStorm {
-            0% { box-shadow: 0 0 15px rgba(255, 30, 39, 0.4), inset 0 0 15px rgba(255, 183, 0, 0.2); border-color: var(--stark-red); }
-            50% { box-shadow: 0 0 35px rgba(255, 183, 0, 0.9), inset 0 0 25px rgba(255, 255, 255, 0.6); border-color: var(--stark-gold); }
-            100% { box-shadow: 0 0 15px rgba(255, 30, 39, 0.4), inset 0 0 15px rgba(255, 183, 0, 0.2); border-color: var(--stark-red); }
+            0% { box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), inset 0 0 20px rgba(0, 240, 255, 0.3); border-color: var(--stark-red); }
+            50% { box-shadow: 0 0 40px rgba(0, 240, 255, 0.8), inset 0 0 30px rgba(255, 183, 0, 0.6); border-color: var(--arc-cyan); }
+            100% { box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), inset 0 0 20px rgba(0, 240, 255, 0.3); border-color: var(--stark-red); }
         }
 
         @keyframes flashText {
@@ -155,22 +156,25 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
+        /* PALCO PRINCIPAL COM FUNDO TECNOLÓGICO IMERSIVO E ILUMINAÇÃO DE REATOR ARC */
         .hero-stage {
             position: relative;
-            background: #000;
+            background: radial-gradient(circle at center, #111e38 0%, #050811 70%, #000000 100%);
             border: 3px solid var(--stark-red);
             border-radius: 16px;
             text-align: center;
             margin-bottom: 25px;
-            animation: armorEnergyStorm 2.5s infinite ease-in-out;
+            animation: armorEnergyStorm 3s infinite ease-in-out;
             overflow: hidden;
+            padding: 10px;
         }
 
         .hero-stage img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 13px;
+            border-radius: 12px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.8));
         }
 
         .price-box {
@@ -345,7 +349,6 @@
             border-radius: 10px;
         }
 
-        /* ESTILO DA ÚNICA FOTO DE DESTAQUE SUBSTITUINDO A GALERIA ANTIGA */
         .single-highlight-image {
             width: 100%;
             border-radius: 12px;
@@ -458,9 +461,9 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- Palco Principal -->
+        <!-- PALCO PRINCIPAL COM A SUA NOVA FOTO EDITADA E FUNDO IMERSIVO DE TECNOLOGIA -->
         <div class="hero-stage">
-            <img src="20260927_013805_0000.png" alt="Capy Stark Art Toys - Boneco Montado">
+            <img src="Design sem nome_20260927_152912_0000.png" alt="Capy Stark Art Toys - Design Especial">
         </div>
 
         <div class="price-box">
@@ -489,7 +492,7 @@
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
             </div>
-            <div class="stark-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precision."</div>
+            <div class="stark-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precisão."</div>
 
             <div class="video-card">
                 <video src="lv_0_20260927120831.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -505,7 +508,6 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
-        <!-- SUBSTITUIÇÃO FEITA: ÚNICA FOTO EXATA DA SUA ESCOLHA -->
         <img src="Screenshot_2026-09-27-14-35-05-307_com.alibaba.aliexpresshd.png" class="single-highlight-image" alt="Capy Stark - Exibição Premium">
 
         <!-- AVALIAÇÕES -->
