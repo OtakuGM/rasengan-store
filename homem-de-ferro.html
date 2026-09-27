@@ -35,7 +35,7 @@
             line-height: 1.5;
         }
 
-        /* --- CABEÇALHO OTAKU GM --- */
+        /* --- CABEÇALHO DA LOJA --- */
         .cabecalho-loja {
             background-color: #000000;
             text-align: center;
@@ -52,7 +52,7 @@
             margin: 0 auto;
         }
 
-        /* --- BANNER DE OFERTA EXCLUSIVO --- */
+        /* --- BANNER DE OFERTA --- */
         .top-banner {
             background: linear-gradient(90deg, var(--stark-red), var(--stark-gold));
             color: #000;
@@ -69,7 +69,6 @@
             animation: flashText 2s infinite;
         }
 
-        /* Animações e Efeitos Visuais Marvel */
         @keyframes pulseGlow {
             0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), 0 0 40px rgba(255, 183, 0, 0.3); }
             50% { transform: scale(1.02); box-shadow: 0 0 45px rgba(255, 30, 39, 0.9), 0 0 70px rgba(255, 183, 0, 0.7); }
@@ -98,26 +97,26 @@
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(6, 8, 13, 0.65);
-            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.65);
+            background: rgba(6, 8, 13, 0.85);
+            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.85);
         }
 
-        /* FUNDO FIXO COM ATMOSFERA IMERSIVA (REUTILIZANDO AS IMAGENS DE SUPORTE) */
+        /* FUNDO COM AS IMAGENS DE FUNDO TRANSPARENTE DO HOMEM DE FERRO */
         .anime-overlay {
             position: fixed; 
             z-index: -1;
-            opacity: 0.3; 
-            filter: drop-shadow(0 0 20px var(--arc-glow));
+            opacity: 0.20; 
+            filter: drop-shadow(0 0 25px var(--stark-red));
             pointer-events: none;
         }
 
-        .naruto-1 { top: 5vh; right: -60px; width: 280px; transform: rotate(5deg); }
-        .naruto-2 { top: 40vh; left: -80px; width: 320px; }
-        .naruto-3 { bottom: 2vh; right: -50px; width: 300px; }
+        .iron-bg-1 { top: 5vh; right: -40px; width: 260px; transform: rotate(10deg); }
+        .iron-bg-2 { top: 45vh; left: -60px; width: 300px; }
+        .iron-bg-3 { bottom: 2vh; right: -40px; width: 280px; }
 
         .badge {
             display: inline-block;
-            background: rgba(255, 30, 39, 0.1);
+            background: rgba(255, 30, 39, 0.15);
             border: 1px solid var(--stark-red);
             color: var(--stark-red);
             padding: 5px 15px;
@@ -132,7 +131,6 @@
 
         h1, .section-title { text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); }
 
-        /* TÍTULO ESTILO MARVEL / CAPY STARK */
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
@@ -154,13 +152,12 @@
             padding-left: 10px;
             margin-bottom: 25px;
             font-size: 1.1rem;
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.85);
             padding: 12px;
             border-radius: 0 8px 8px 0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Palco Principal com Borda Energizada */
         .hero-stage {
             position: relative;
             background: #000;
@@ -254,7 +251,6 @@
             text-transform: uppercase;
         }
 
-        /* Botão de Compra com Efeito Marvel / Stark */
         .btn-buy {
             display: block;
             width: 100%;
@@ -306,7 +302,7 @@
             font-size: 1.05rem;
         }
 
-        .ninja-divider-quote {
+        .stark-divider-quote {
             text-align: center;
             font-style: italic;
             color: var(--stark-gold);
@@ -447,18 +443,22 @@
 </head>
 <body>
 
+    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
+    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <img src="96524.png" class="anime-overlay naruto-1" alt="Atmosfera Fundo 1">
-    <img src="96525.png" class="anime-overlay naruto-2" alt="Atmosfera Fundo 2">
-    <img src="96523.png" class="anime-overlay naruto-3" alt="Atmosfera Fundo 3">
+    <!-- FUNDOS COM AS SUAS IMAGENS TRANSPARENTES DO HOMEM DE FERRO -->
+    <img src="100578.png" class="anime-overlay iron-bg-1" alt="Homem de Ferro Fundo 1">
+    <img src="100579.png" class="anime-overlay iron-bg-2" alt="Homem de Ferro Fundo 2">
+    <img src="100580.png" class="anime-overlay iron-bg-3" alt="Homem de Ferro Fundo 3">
 
+    <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -468,6 +468,7 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
+        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -493,16 +494,17 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
+        <!-- SEÇÃO DOS SEUS 2 VÍDEOS NOVOS CORRIGIDOS -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="100543.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="ninja-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precisão."</div>
+            <div class="stark-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precisão."</div>
 
             <div class="video-card">
                 <video src="100545.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="ninja-divider-quote">🔥 "O herói mais fofo e poderoso do universo geek na sua estante!"</div>
+            <div class="stark-divider-quote">🔥 "O herói mais fofo e poderoso do universo geek na sua estante!"</div>
         </div>
 
         <h2 class="section-title">Nível Gênios de Detalhes</h2>
@@ -513,12 +515,14 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
+        <!-- Galeria de Imagens -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
+        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
