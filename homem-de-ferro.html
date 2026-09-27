@@ -15,7 +15,6 @@
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
             --arc-cyan: #00f0ff;
-            --arc-glow: #ff3300;
             --text-main: #f0f4f8;
             --text-muted: #94a3b8;
             --green-success: #00e676;
@@ -35,7 +34,6 @@
             line-height: 1.5;
         }
 
-        /* --- CABEÇALHO DA LOJA --- */
         .cabecalho-loja {
             background-color: #000000;
             text-align: center;
@@ -52,7 +50,6 @@
             margin: 0 auto;
         }
 
-        /* --- BANNER DE OFERTA --- */
         .top-banner {
             background: linear-gradient(90deg, var(--stark-red), var(--stark-gold));
             color: #000;
@@ -97,22 +94,22 @@
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(6, 8, 13, 0.85);
-            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.85);
+            background: rgba(6, 8, 13, 0.9);
+            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.9);
         }
 
-        /* FUNDO COM AS IMAGENS DE FUNDO TRANSPARENTE DO HOMEM DE FERRO */
+        /* FUNDO COM AS IMAGENS TRANSPARENTES */
         .anime-overlay {
             position: fixed; 
             z-index: -1;
-            opacity: 0.20; 
+            opacity: 0.18; 
             filter: drop-shadow(0 0 25px var(--stark-red));
             pointer-events: none;
         }
 
-        .iron-bg-1 { top: 5vh; right: -40px; width: 260px; transform: rotate(10deg); }
-        .iron-bg-2 { top: 45vh; left: -60px; width: 300px; }
-        .iron-bg-3 { bottom: 2vh; right: -40px; width: 280px; }
+        .iron-bg-1 { top: 5vh; right: -30px; width: 250px; transform: rotate(10deg); }
+        .iron-bg-2 { top: 42vh; left: -50px; width: 280px; }
+        .iron-bg-3 { bottom: 2vh; right: -30px; width: 270px; }
 
         .badge {
             display: inline-block;
@@ -192,7 +189,6 @@
             color: #ef4444;
             text-decoration: line-through;
             font-weight: 600;
-            position: relative;
         }
 
         .price-current {
@@ -443,22 +439,18 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
-    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- FUNDOS COM AS SUAS IMAGENS TRANSPARENTES DO HOMEM DE FERRO -->
     <img src="100578.png" class="anime-overlay iron-bg-1" alt="Homem de Ferro Fundo 1">
     <img src="100579.png" class="anime-overlay iron-bg-2" alt="Homem de Ferro Fundo 2">
     <img src="100580.png" class="anime-overlay iron-bg-3" alt="Homem de Ferro Fundo 3">
 
-    <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -468,7 +460,6 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -494,15 +485,14 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
-        <!-- SEÇÃO DOS SEUS 2 VÍDEOS NOVOS CORRIGIDOS -->
         <div class="video-grid">
             <div class="video-card">
-                <video src="100543.mp4" autoplay muted loop playsinline></video>
+                <video src="100543.mp4" autoplay muted loop playsinline preload="auto"></video>
             </div>
             <div class="stark-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precisão."</div>
 
             <div class="video-card">
-                <video src="100545.mp4" autoplay muted loop playsinline></video>
+                <video src="100545.mp4" autoplay muted loop playsinline preload="auto"></video>
             </div>
             <div class="stark-divider-quote">🔥 "O herói mais fofo e poderoso do universo geek na sua estante!"</div>
         </div>
@@ -515,14 +505,12 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
-        <!-- Galeria de Imagens -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
-        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
