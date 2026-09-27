@@ -11,7 +11,7 @@
 
     <style>
         :root {
-            --bg-dark: #030406;
+            --bg-dark: #020305;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
             --green-success: #00e676;
@@ -34,33 +34,35 @@
             position: relative;
         }
 
-        /* FUNDO FIXO IMERSIVO COM AS EXTENSÕES EXATAS .PNG */
+        /* FUNDO IMERSIVO ESPALHADO E BEM VISÍVEL */
         .bg-iron-1, .bg-iron-2, .bg-iron-3 {
             position: fixed;
             z-index: -1;
-            opacity: 0.60;
+            opacity: 0.85; /* Bem mais visíveis e nítidas */
             pointer-events: none;
             filter: drop-shadow(0 0 25px rgba(255, 30, 39, 0.9));
         }
 
+        /* Distribuídas estrategicamente para não aglomerar */
         .bg-iron-1 {
-            top: 4vh;
-            left: -35px;
-            width: 310px;
-            transform: rotate(-8deg);
+            top: 10vh;
+            left: -20px;
+            width: 290px;
+            transform: rotate(-12deg);
         }
 
         .bg-iron-2 {
-            top: 40vh;
-            right: -35px;
+            top: 48vh;
+            right: -25px;
             width: 310px;
-            transform: rotate(8deg);
+            transform: rotate(10deg);
         }
 
         .bg-iron-3 {
-            bottom: 4vh;
-            left: -35px;
-            width: 310px;
+            bottom: 12vh;
+            left: -25px;
+            width: 300px;
+            transform: rotate(-5deg);
         }
 
         .cabecalho-loja {
@@ -117,14 +119,15 @@
             50% { opacity: 0.8; }
         }
 
+        /* CONTAINER CENTRAL COM FUNDO SOLIDO PARA O TEXTO FICAR 1 EIN LEGÍVEL */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(3, 4, 6, 0.82);
-            box-shadow: 0 0 60px 40px rgba(3, 4, 6, 0.95);
+            background: rgba(2, 3, 5, 0.88);
+            box-shadow: 0 0 70px 45px rgba(2, 3, 5, 0.98);
         }
 
         .badge {
@@ -428,7 +431,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(3, 4, 6, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(2, 3, 5, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -470,10 +473,10 @@
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- AS 3 IMAGENS DE FUNDO COM OS NOMES EXATOS E EXTENSÃO .PNG -->
-    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
-    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
-    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo Inferior">
+    <!-- AS 3 IMAGENS DE FUNDO BEM VISÍVEIS E ESPALHADAS -->
+    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo 1">
+    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo 2">
+    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo 3">
 
     <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
@@ -582,8 +585,4 @@
             <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu dinheiro sem burocracia.</p>
         </div>
 
-        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">GARANTIR MEU CAPY STARK</a>
-
-        <footer>
-            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
-            <p>© 2026 Otaku GM. Todos
+        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_b
