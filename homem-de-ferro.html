@@ -11,7 +11,7 @@
 
     <style>
         :root {
-            --bg-dark: #010204;
+            --bg-dark: #000000;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
             --green-success: #00e676;
@@ -26,6 +26,7 @@
             font-family: 'Rajdhani', sans-serif;
         }
 
+        /* CORPO DA PÁGINA TOTALMENTE ESCURO PARA DAR DESTAQUE */
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
@@ -34,36 +35,36 @@
             position: relative;
         }
 
-        /* FUNDO SUPER IMERSIVO, NÍTIDO E BEM VISÍVEL NAS LATERAIS */
+        /* FUNDO COM POSIÇÃO ABSOLUTA DISTRIBUÍDA AO LONGO DA PÁGINA INTEIRA */
         .bg-iron-1, .bg-iron-2, .bg-iron-3 {
-            position: fixed;
-            z-index: -1;
-            opacity: 0.95; /* Altíssima visibilidade, nada apagado */
+            position: absolute;
+            z-index: 0;
+            opacity: 0.95; /* Super visíveis, nada transparentes */
             pointer-events: none;
-            filter: drop-shadow(0 0 35px rgba(255, 30, 39, 0.95)) drop-shadow(0 0 15px rgba(255, 183, 0, 0.6));
+            filter: drop-shadow(0 0 40px rgba(255, 30, 39, 1)) drop-shadow(0 0 20px rgba(255, 183, 0, 0.7));
         }
 
-        /* 1. Imagem na Esquerda (Topo) */
+        /* 1. Primeira imagem no Topo Esquerdo */
         .bg-iron-1 {
-            top: 12vh;
-            left: -35px;
-            width: 270px;
+            top: 50px;
+            left: -20px;
+            width: 280px;
             transform: rotate(-10deg);
         }
 
-        /* 2. Imagem na Direita (Meio) */
+        /* 2. Segunda imagem no Meio Direito */
         .bg-iron-2 {
-            top: 42vh;
-            right: -35px;
-            width: 280px;
+            top: 750px;
+            right: -20px;
+            width: 290px;
             transform: rotate(10deg);
         }
 
-        /* 3. Imagem na Esquerda (Rodapé) */
+        /* 3. Terceira imagem mais abaixo na Esquerda */
         .bg-iron-3 {
-            bottom: 10vh;
-            left: -35px;
-            width: 280px;
+            top: 1550px;
+            left: -20px;
+            width: 290px;
             transform: rotate(-5deg);
         }
 
@@ -121,15 +122,15 @@
             50% { opacity: 0.8; }
         }
 
-        /* CONTAINER CENTRAL COM CONTRASTE IDEAL PARA DEIXAR O TEXTO LEGÍVEL E AS ARTES LATERAIS EVIDENTES */
+        /* CONTAINER CENTRAL COM FUNDO TOTALMENTE OPACO PARA O TEXTO FICAR LIMPO E LEGÍVEL */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(1, 2, 4, 0.91);
-            box-shadow: 0 0 80px 50px rgba(1, 2, 4, 0.98);
+            background: #05070a;
+            box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.95);
         }
 
         .badge {
@@ -433,7 +434,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(1, 2, 4, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(5, 7, 10, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -465,6 +466,11 @@
 </head>
 <body>
 
+    <!-- AS 3 IMAGENS ESPALHADAS E BEM VISÍVEIS AO LONGO DA PÁGINA -->
+    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
+    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
+    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo Esquerda Inferior">
+
     <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
@@ -474,11 +480,6 @@
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
-
-    <!-- AS 3 IMAGENS DE FUNDO BEM VISÍVEIS, LATERAIS ALTERNADAS E IMERSIVAS -->
-    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
-    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
-    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo Esquerda Inferior">
 
     <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
@@ -583,5 +584,4 @@
         </div>
 
         <div class="guarantee-box">
-            <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
-            <p>Se você receber
+            <h3>🔰 GARANTIA
