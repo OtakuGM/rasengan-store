@@ -35,6 +35,41 @@
             position: relative;
         }
 
+        /* ------------------------------------------------ */
+        /* CORREÇÃO DAS FOTOS DE FUNDO: NAS MARGENS LATERAIS */
+        /* ------------------------------------------------ */
+        .bg-side-left-top, .bg-side-right-mid, .bg-side-left-bottom {
+            position: fixed;
+            z-index: 0; /* Acima do preto do body, mas abaixo do texto */
+            opacity: 0.85; /* Bem visíveis, nada apagadas */
+            pointer-events: none;
+            filter: drop-shadow(0 0 20px rgba(255, 30, 39, 0.8));
+        }
+
+        /* Imagem 1: Lado esquerdo no topo */
+        .bg-side-left-top {
+            top: 15vh;
+            left: -15px;
+            width: 110px;
+            transform: rotate(-10deg);
+        }
+
+        /* Imagem 2: Lado direito no meio */
+        .bg-side-right-mid {
+            top: 45vh;
+            right: -15px;
+            width: 115px;
+            transform: rotate(10deg);
+        }
+
+        /* Imagem 3: Lado esquerdo mais abaixo */
+        .bg-side-left-bottom {
+            top: 75vh;
+            left: -15px;
+            width: 110px;
+            transform: rotate(-5deg);
+        }
+
         .cabecalho-loja {
             background-color: #000000;
             text-align: center;
@@ -89,13 +124,14 @@
             50% { opacity: 0.8; }
         }
 
+        /* CONTAINER CENTRAL COM TRANSPARENÇA LEVE PARA AS ARTES APARECEREM NAS BORDAS */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 10;
-            background: linear-gradient(180deg, #0d1222 0%, #05070a 40%, #000000 100%);
+            background: rgba(3, 5, 8, 0.90);
             box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.98);
         }
 
@@ -129,43 +165,21 @@
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
         }
 
-        /* BLOCO ESTILO NARUTO: TÍTULO/FRASE COM A ARTE DO HEROI NÍTIDA AO LADO */
-        .hero-banner-immersive {
-            position: relative;
-            background: linear-gradient(135deg, rgba(20, 35, 60, 0.9) 0%, rgba(8, 12, 20, 0.95) 100%);
-            border: 1px solid rgba(255, 183, 0, 0.4);
-            border-left: 4px solid var(--stark-red);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 240, 255, 0.15);
-        }
-
-        .hero-banner-text {
-            flex: 1;
+        .epic-quote {
             font-style: italic;
             font-weight: 600;
             color: var(--stark-gold);
-            font-size: 0.98rem;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.9);
-            line-height: 1.4;
+            border-left: 3px solid var(--stark-red);
+            padding-left: 10px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* ARTE NÍTIDA E IMERSIVA IDÊNTICA AO ESTILO DO NARUTO */
-        .hero-banner-img {
-            width: 110px;
-            height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 0 12px rgba(255, 30, 39, 0.8)) drop-shadow(0 0 6px rgba(0, 240, 255, 0.7));
-            flex-shrink: 0;
-            animation: pulseGlow 3s infinite ease-in-out;
-        }
-
-        /* PALCO PRINCIPAL DO BONECO */
+        /* PALCO PRINCIPAL COM O NOVO DESIGN E EFEITO LASER/LABORATÓRIO */
         .hero-stage {
             position: relative;
             background: radial-gradient(circle at 50% 50%, #1a2a48 0%, #0d1222 50%, #05070a 100%);
@@ -459,6 +473,11 @@
 </head>
 <body>
 
+    <!-- AS 3 IMAGENS DE FUNDO POSICIONADAS NAS MARGENS LATERAIS (SEM COBRIR O TEXTO) -->
+    <img src="20260927_123840_0000.png" class="bg-side-left-top" alt="Fundo Iron Esquerda">
+    <img src="1_20260927_123655_0000.png" class="bg-side-right-mid" alt="Fundo Iron Direita">
+    <img src="2_20260927_123655_0001.png" class="bg-side-left-bottom" alt="Fundo Iron Inferior">
+
     <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
@@ -475,15 +494,11 @@
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
         <h1>Capy Stark Art Toys</h1>
         
-        <!-- BLOCO ESTILO NARUTO COM A ARTE DO HOMEM DE FERRO NÍTIDA AO LADO -->
-        <div class="hero-banner-immersive">
-            <div class="hero-banner-text">
-                "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
-            </div>
-            <img src="20260927_123840_0000.png" class="hero-banner-img" alt="Homem de Ferro Imersivo">
+        <div class="epic-quote">
+            "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- PALCO PRINCIPAL -->
+        <!-- PALCO PRINCIPAL COM EFEITO DE CENA DE LABORATÓRIO / LASER -->
         <div class="hero-stage">
             <img src="Design sem nome_20260927_152912_0000.png" alt="Capy Stark Art Toys - Design Especial">
         </div>
@@ -560,10 +575,4 @@
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Rafael" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Rafael O.</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Nota 10/10! Encaixe perfeito das peças, cores vivas e o design é único. Vale cada centavo investido.
+                    <img src="https://images.unsplash.com/
