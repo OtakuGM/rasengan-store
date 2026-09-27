@@ -94,21 +94,22 @@
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(6, 8, 13, 0.9);
-            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.9);
+            background: rgba(6, 8, 13, 0.88);
+            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.88);
         }
 
-        .anime-overlay {
+        /* ATMOSFERA DE FUNDO COM AS 3 NOVAS IMAGENS DO HOMEM DE FERRO */
+        .iron-overlay {
             position: fixed; 
             z-index: -1;
-            opacity: 0.18; 
-            filter: drop-shadow(0 0 25px var(--stark-red));
+            opacity: 0.16; 
+            filter: drop-shadow(0 0 30px rgba(255, 30, 39, 0.7));
             pointer-events: none;
         }
 
-        .iron-bg-1 { top: 5vh; right: -30px; width: 250px; transform: rotate(10deg); }
-        .iron-bg-2 { top: 42vh; left: -50px; width: 280px; }
-        .iron-bg-3 { bottom: 2vh; right: -30px; width: 270px; }
+        .iron-bg-top { top: 6vh; right: -50px; width: 280px; transform: rotate(12deg); }
+        .iron-bg-mid { top: 45vh; left: -70px; width: 310px; }
+        .iron-bg-bot { bottom: 4vh; right: -50px; width: 290px; transform: rotate(-8deg); }
 
         .badge {
             display: inline-block;
@@ -323,7 +324,6 @@
             margin-bottom: 30px;
         }
 
-        /* FORMATO QUADRADO PERFEITO EXATO (1:1), SEM SOBRAS OU BORDAS PRETAS */
         .video-card {
             width: 100%;
             aspect-ratio: 1 / 1;
@@ -454,10 +454,10 @@
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- FUNDOS COM AS SUAS IMAGENS TRANSPARENTES DO HOMEM DE FERRO -->
-    <img src="100578.png" class="anime-overlay iron-bg-1" alt="Homem de Ferro Fundo 1">
-    <img src="100579.png" class="anime-overlay iron-bg-2" alt="Homem de Ferro Fundo 2">
-    <img src="100580.png" class="anime-overlay iron-bg-3" alt="Homem de Ferro Fundo 3">
+    <!-- ATMOSFERA DE FUNDO COM AS 3 NOVAS IMAGENS DO HOMEM DE FERRO -->
+    <img src="20260927_123840_0000.png" class="iron-overlay iron-bg-top" alt="Homem de Ferro Fundo Topo">
+    <img src="1_20260927_123655_0000.png" class="iron-overlay iron-bg-mid" alt="Homem de Ferro Fundo Meio">
+    <img src="2_20260927_123655_0001.png" class="iron-overlay iron-bg-bot" alt="Homem de Ferro Fundo Rodapé">
 
     <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
@@ -495,7 +495,7 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
-        <!-- SEÇÃO DOS 2 VÍDEOS EM FORMATO QUADRADO PERFEITO -->
+        <!-- SEÇÃO DOS 2 VÍDEOS -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
