@@ -11,13 +11,12 @@
 
     <style>
         :root {
-            --bg-dark: #06080d;
+            --bg-dark: #05070a;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
-            --arc-cyan: #00f0ff;
+            --green-success: #00e676;
             --text-main: #f0f4f8;
             --text-muted: #94a3b8;
-            --green-success: #00e676;
         }
 
         * {
@@ -27,12 +26,42 @@
             font-family: 'Rajdhani', sans-serif;
         }
 
-        /* FUNDO GERAL DA PÁGINA MAIS ESCURO PARA DESTACAR AS ARTES */
+        /* FUNDO GERAL DA PÁGINA */
         body {
-            background-color: #030406;
+            background-color: var(--bg-dark);
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.5;
+            position: relative;
+        }
+
+        /* EFEITO DE FUNDO IMERSIVO COM AS 3 IMAGENS FIXAS NAS LATERAIS */
+        .bg-iron-1, .bg-iron-2, .bg-iron-3 {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.50;
+            pointer-events: none;
+            filter: drop-shadow(0 0 20px rgba(255, 30, 39, 0.8));
+        }
+
+        .bg-iron-1 {
+            top: 5vh;
+            left: -40px;
+            width: 320px;
+            transform: rotate(-10deg);
+        }
+
+        .bg-iron-2 {
+            top: 38vh;
+            right: -50px;
+            width: 340px;
+            transform: rotate(10deg);
+        }
+
+        .bg-iron-3 {
+            bottom: 5vh;
+            left: -40px;
+            width: 320px;
         }
 
         .cabecalho-loja {
@@ -89,31 +118,17 @@
             50% { opacity: 0.8; }
         }
 
-        /* CAIXA CENTRAL COM TRANSPARÊNCIA EQUILIBRADA PARA DEIXAR O FUNDO BEM VISÍVEL */
+        /* CONTAINER CENTRAL COM LEVE TRANSPARÊNCIA PARA EXIBIR O FUNDO */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(6, 8, 13, 0.78);
-            backdrop-filter: blur(3px);
-            box-shadow: 0 0 40px 30px rgba(6, 8, 13, 0.85);
+            background: rgba(5, 7, 10, 0.75);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0 50px 30px rgba(5, 7, 10, 0.85);
         }
-
-        /* EFEITO IMERSIVO: AS 3 IMAGENS BEM VISÍVEIS E HARMONICAS NO FUNDO FIXO */
-        .iron-overlay {
-            position: fixed; 
-            z-index: -1;
-            opacity: 0.55; /* Aumentado para garantir que fiquem bem marcadas como no Naruto */
-            filter: drop-shadow(0 0 25px rgba(255, 30, 39, 0.6));
-            pointer-events: none;
-            transition: all 0.3s ease;
-        }
-
-        .iron-bg-top { top: 5vh; right: -40px; width: 270px; transform: rotate(10deg); }
-        .iron-bg-mid { top: 42vh; left: -60px; width: 300px; }
-        .iron-bg-bot { bottom: 5vh; right: -40px; width: 280px; transform: rotate(-8deg); }
 
         .badge {
             display: inline-block;
@@ -416,7 +431,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(6, 8, 13, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(5, 7, 10, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -448,18 +463,22 @@
 </head>
 <body>
 
+    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
+    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <img src="100699.jpg" class="iron-overlay iron-bg-top" alt="Homem de Ferro Fundo 1">
-    <img src="100698.jpg" class="iron-overlay iron-bg-mid" alt="Homem de Ferro Fundo 2">
-    <img src="100697.jpg" class="iron-overlay iron-bg-bot" alt="Homem de Ferro Fundo 3">
+    <!-- AS 3 NOVAS IMAGENS DO HOMEM DE FERRO FIXADAS NO FUNDO -->
+    <img src="100699.jpg" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
+    <img src="100698.jpg" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
+    <img src="100697.jpg" class="bg-iron-3" alt="Homem de Ferro Fundo Inferior">
 
+    <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -469,6 +488,7 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
+        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -494,6 +514,7 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
+        <!-- SEÇÃO DOS 2 VÍDEOS -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -514,12 +535,14 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
+        <!-- Galeria de Imagens -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
+        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
@@ -547,7 +570,7 @@
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=icon&q=80" alt="Avatar Rafael" class="review-avatar">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Rafael" class="review-avatar">
                     <div class="review-user-info">
                         <h4>Rafael O.</h4>
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
@@ -564,12 +587,4 @@
 
         <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">COMPRAR COM DESCONTO AGORA</a>
 
-        <footer>
-            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
-            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+        <
