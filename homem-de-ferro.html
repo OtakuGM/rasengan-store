@@ -27,8 +27,9 @@
             font-family: 'Rajdhani', sans-serif;
         }
 
+        /* FUNDO GERAL DA PÁGINA MAIS ESCURO PARA DESTACAR AS ARTES */
         body {
-            background-color: var(--bg-dark);
+            background-color: #030406;
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.5;
@@ -88,28 +89,31 @@
             50% { opacity: 0.8; }
         }
 
+        /* CAIXA CENTRAL COM TRANSPARÊNCIA EQUILIBRADA PARA DEIXAR O FUNDO BEM VISÍVEL */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(6, 8, 13, 0.88);
-            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.88);
+            background: rgba(6, 8, 13, 0.78);
+            backdrop-filter: blur(3px);
+            box-shadow: 0 0 40px 30px rgba(6, 8, 13, 0.85);
         }
 
-        /* ATMOSFERA DE FUNDO COM AS 3 NOVAS IMAGENS DO HOMEM DE FERRO */
+        /* EFEITO IMERSIVO: AS 3 IMAGENS BEM VISÍVEIS E HARMONICAS NO FUNDO FIXO */
         .iron-overlay {
             position: fixed; 
             z-index: -1;
-            opacity: 0.16; 
-            filter: drop-shadow(0 0 30px rgba(255, 30, 39, 0.7));
+            opacity: 0.55; /* Aumentado para garantir que fiquem bem marcadas como no Naruto */
+            filter: drop-shadow(0 0 25px rgba(255, 30, 39, 0.6));
             pointer-events: none;
+            transition: all 0.3s ease;
         }
 
-        .iron-bg-top { top: 6vh; right: -50px; width: 280px; transform: rotate(12deg); }
-        .iron-bg-mid { top: 45vh; left: -70px; width: 310px; }
-        .iron-bg-bot { bottom: 4vh; right: -50px; width: 290px; transform: rotate(-8deg); }
+        .iron-bg-top { top: 5vh; right: -40px; width: 270px; transform: rotate(10deg); }
+        .iron-bg-mid { top: 42vh; left: -60px; width: 300px; }
+        .iron-bg-bot { bottom: 5vh; right: -40px; width: 280px; transform: rotate(-8deg); }
 
         .badge {
             display: inline-block;
@@ -444,22 +448,18 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
-    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- ATMOSFERA DE FUNDO COM AS 3 NOVAS IMAGENS DO HOMEM DE FERRO -->
-    <img src="20260927_123840_0000.png" class="iron-overlay iron-bg-top" alt="Homem de Ferro Fundo Topo">
-    <img src="1_20260927_123655_0000.png" class="iron-overlay iron-bg-mid" alt="Homem de Ferro Fundo Meio">
-    <img src="2_20260927_123655_0001.png" class="iron-overlay iron-bg-bot" alt="Homem de Ferro Fundo Rodapé">
+    <img src="100699.jpg" class="iron-overlay iron-bg-top" alt="Homem de Ferro Fundo 1">
+    <img src="100698.jpg" class="iron-overlay iron-bg-mid" alt="Homem de Ferro Fundo 2">
+    <img src="100697.jpg" class="iron-overlay iron-bg-bot" alt="Homem de Ferro Fundo 3">
 
-    <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -469,7 +469,6 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -495,7 +494,6 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
-        <!-- SEÇÃO DOS 2 VÍDEOS -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -516,14 +514,12 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
-        <!-- Galeria de Imagens -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
-        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
@@ -551,7 +547,7 @@
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Rafael" class="review-avatar">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=icon&q=80" alt="Avatar Rafael" class="review-avatar">
                     <div class="review-user-info">
                         <h4>Rafael O.</h4>
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
