@@ -35,7 +35,7 @@
             position: relative;
         }
 
-        /* FUNDO FIXO IMERSIVO */
+        /* FUNDO FIXO IMERSIVO GERAL */
         .bg-fixed-1, .bg-fixed-2, .bg-fixed-3 {
             position: fixed;
             z-index: -1;
@@ -93,7 +93,7 @@
 
         @keyframes armorEnergyStorm {
             0% { box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), inset 0 0 20px rgba(0, 240, 255, 0.3); border-color: var(--stark-red); }
-            50% { box-shadow: 0 0 40px rgba(0, 240, 255, 0.8), inset 0 0 30px rgba(255, 183, 0, 0.6); border-color: var(--arc-cyan); }
+            50% { box-shadow: 0 0 45px rgba(0, 240, 255, 0.9), inset 0 0 35px rgba(255, 30, 39, 0.7); border-color: var(--arc-cyan); }
             100% { box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), inset 0 0 20px rgba(0, 240, 255, 0.3); border-color: var(--stark-red); }
         }
 
@@ -156,25 +156,40 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* PALCO PRINCIPAL COM FUNDO TECNOLÓGICO IMERSIVO E ILUMINAÇÃO DE REATOR ARC */
+        /* PALCO PRINCIPAL COM EFEITO DE CENA DE LABORATÓRIO E EXPLOSÃO DE ENERGIA ARC/LASER */
         .hero-stage {
             position: relative;
-            background: radial-gradient(circle at center, #111e38 0%, #050811 70%, #000000 100%);
+            background: radial-gradient(circle at 50% 50%, #1a2a48 0%, #0d1222 50%, #05070a 100%);
             border: 3px solid var(--stark-red);
             border-radius: 16px;
             text-align: center;
             margin-bottom: 25px;
             animation: armorEnergyStorm 3s infinite ease-in-out;
             overflow: hidden;
-            padding: 10px;
+            padding: 15px;
+        }
+
+        /* Camada de raios laser e explosão de energia de fundo para imersão total */
+        .hero-stage::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.4) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(255, 30, 39, 0.4) 0%, transparent 40%),
+                        linear-gradient(135deg, rgba(255, 183, 0, 0.15) 0%, transparent 100%);
+            z-index: 1;
+            pointer-events: none;
+            mix-blend-mode: screen;
         }
 
         .hero-stage img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 12px;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.8));
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.9));
         }
 
         .price-box {
@@ -461,7 +476,7 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- PALCO PRINCIPAL COM A SUA NOVA FOTO EDITADA E FUNDO IMERSIVO DE TECNOLOGIA -->
+        <!-- PALCO PRINCIPAL COM EFEITO DE CENA DE LABORATÓRIO / LASER -->
         <div class="hero-stage">
             <img src="Design sem nome_20260927_152912_0000.png" alt="Capy Stark Art Toys - Design Especial">
         </div>
@@ -550,17 +565,4 @@
 
         <div class="guarantee-box">
             <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
-            <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu dinheiro sem burocracia.</p>
-        </div>
-
-        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">COMPRAR COM DESCONTO AGORA</a>
-
-        <footer>
-            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
-            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+            <p>Se você receber o seu Capy Stark e n
