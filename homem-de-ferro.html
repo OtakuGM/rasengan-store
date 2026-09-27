@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminária Stark Armor LED | Otaku GM</title>
+    <title>Capy Stark Art Toys | Otaku GM</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +11,11 @@
 
     <style>
         :root {
-            --bg-dark: #080a0f;
+            --bg-dark: #06080d;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
             --arc-cyan: #00f0ff;
-            --arc-glow: #0077ff;
+            --arc-glow: #ff3300;
             --text-main: #f0f4f8;
             --text-muted: #94a3b8;
             --green-success: #00e676;
@@ -53,7 +52,7 @@
             margin: 0 auto;
         }
 
-        /* --- BANNER DE OFERTA STARK --- */
+        /* --- BANNER DE OFERTA EXCLUSIVO --- */
         .top-banner {
             background: linear-gradient(90deg, var(--stark-red), var(--stark-gold));
             color: #000;
@@ -66,26 +65,26 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(255, 30, 39, 0.5);
+            box-shadow: 0 2px 20px rgba(255, 30, 39, 0.6);
             animation: flashText 2s infinite;
         }
 
-        /* Animações Tecnológicas */
+        /* Animações e Efeitos Visuais Marvel */
         @keyframes pulseGlow {
-            0% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
-            50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(0, 240, 255, 0.9), 0 0 60px rgba(255, 30, 39, 0.5); }
-            100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), 0 0 40px rgba(255, 183, 0, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 0 45px rgba(255, 30, 39, 0.9), 0 0 70px rgba(255, 183, 0, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 30, 39, 0.5), 0 0 40px rgba(255, 183, 0, 0.3); }
         }
 
         @keyframes priceFlash {
             0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(0, 230, 118, 0.4); }
-            50% { opacity: 0.8; text-shadow: 0 0 25px rgba(0, 240, 255, 0.9); }
+            50% { opacity: 0.8; text-shadow: 0 0 25px rgba(255, 183, 0, 0.9); }
         }
 
-        @keyframes arcReactorStorm {
-            0% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.2); border-color: var(--arc-cyan); }
-            50% { box-shadow: 0 0 40px rgba(0, 240, 255, 0.9), inset 0 0 25px rgba(255, 255, 255, 0.8); border-color: #ffffff; }
-            100% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.2); border-color: var(--arc-cyan); }
+        @keyframes armorEnergyStorm {
+            0% { box-shadow: 0 0 15px rgba(255, 30, 39, 0.4), inset 0 0 15px rgba(255, 183, 0, 0.2); border-color: var(--stark-red); }
+            50% { box-shadow: 0 0 35px rgba(255, 183, 0, 0.9), inset 0 0 25px rgba(255, 255, 255, 0.6); border-color: var(--stark-gold); }
+            100% { box-shadow: 0 0 15px rgba(255, 30, 39, 0.4), inset 0 0 15px rgba(255, 183, 0, 0.2); border-color: var(--stark-red); }
         }
 
         @keyframes flashText {
@@ -99,16 +98,16 @@
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(8, 10, 15, 0.6);
-            box-shadow: 0 0 40px 40px rgba(8, 10, 15, 0.6);
+            background: rgba(6, 8, 13, 0.65);
+            box-shadow: 0 0 40px 40px rgba(6, 8, 13, 0.65);
         }
 
-        /* FUNDO TECNOLÓGICO / HOLOGRÁFICO (REUTILIZANDO AS IMAGENS DE FUNDO) */
+        /* FUNDO FIXO COM ATMOSFERA IMERSIVA (REUTILIZANDO AS IMAGENS DE SUPORTE) */
         .anime-overlay {
             position: fixed; 
             z-index: -1;
-            opacity: 0.25; 
-            filter: drop-shadow(0 0 15px var(--arc-glow));
+            opacity: 0.3; 
+            filter: drop-shadow(0 0 20px var(--arc-glow));
             pointer-events: none;
         }
 
@@ -118,9 +117,9 @@
 
         .badge {
             display: inline-block;
-            background: rgba(255, 183, 0, 0.1);
-            border: 1px solid var(--stark-gold);
-            color: var(--stark-gold);
+            background: rgba(255, 30, 39, 0.1);
+            border: 1px solid var(--stark-red);
+            color: var(--stark-red);
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -128,45 +127,48 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-bottom: 15px;
-            box-shadow: 0 0 10px rgba(255, 183, 0, 0.2);
+            box-shadow: 0 0 10px rgba(255, 30, 39, 0.3);
         }
 
         h1, .section-title { text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); }
 
+        /* TÍTULO ESTILO MARVEL / CAPY STARK */
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
             line-height: 1.1;
             text-transform: uppercase;
-            background: linear-gradient(180deg, #ffffff 0%, var(--stark-gold) 100%);
+            background: linear-gradient(180deg, #ffffff 30%, var(--stark-gold) 70%, var(--stark-red) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 12px;
+            letter-spacing: 1px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
         }
 
         .epic-quote {
             font-style: italic;
             font-weight: 600;
-            color: var(--arc-cyan);
-            border-left: 3px solid var(--arc-cyan);
+            color: var(--stark-gold);
+            border-left: 3px solid var(--stark-red);
             padding-left: 10px;
             margin-bottom: 25px;
             font-size: 1.1rem;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             padding: 12px;
             border-radius: 0 8px 8px 0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Palco Principal Stark */
+        /* Palco Principal com Borda Energizada */
         .hero-stage {
             position: relative;
             background: #000;
-            border: 3px solid var(--arc-cyan);
+            border: 3px solid var(--stark-red);
             border-radius: 16px;
             text-align: center;
             margin-bottom: 25px;
-            animation: arcReactorStorm 2.5s infinite ease-in-out;
+            animation: armorEnergyStorm 2.5s infinite ease-in-out;
             overflow: hidden;
         }
 
@@ -179,7 +181,7 @@
 
         .price-box {
             background: rgba(13, 18, 34, 0.95);
-            border: 1px solid rgba(255, 183, 0, 0.4);
+            border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 22px;
             text-align: center;
@@ -240,9 +242,9 @@
         .stock-progress {
             background: linear-gradient(90deg, var(--stark-red), var(--stark-gold));
             height: 100%;
-            width: 18%;
+            width: 15%;
             border-radius: 10px;
-            box-shadow: 0 0 10px var(--stark-red);
+            box-shadow: 0 0 12px var(--stark-red);
         }
 
         .stock-text {
@@ -252,12 +254,12 @@
             text-transform: uppercase;
         }
 
-        /* Botão de Compra com o link oficial fornecido */
+        /* Botão de Compra com Efeito Marvel / Stark */
         .btn-buy {
             display: block;
             width: 100%;
             padding: 22px;
-            background: linear-gradient(135deg, var(--stark-red) 0%, #b30009 100%);
+            background: linear-gradient(135deg, var(--stark-red) 0%, #b3000b 100%);
             color: #fff;
             font-family: 'Orbitron', sans-serif;
             font-size: 1.3rem;
@@ -268,9 +270,10 @@
             border-radius: 14px;
             animation: pulseGlow 2s infinite ease-in-out;
             transition: all 0.2s ease;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-bottom: 12px;
-            box-shadow: 0 0 25px rgba(255, 30, 39, 0.6);
+            border: 2px solid var(--stark-gold);
+            box-shadow: 0 0 25px rgba(255, 30, 39, 0.7);
         }
 
         .btn-buy:active { transform: scale(0.98); }
@@ -292,8 +295,8 @@
             display: inline-block;
             width: 5px;
             height: 22px;
-            background: var(--stark-gold);
-            box-shadow: 0 0 10px var(--stark-gold);
+            background: var(--stark-red);
+            box-shadow: 0 0 12px var(--stark-red);
         }
 
         .desc-text {
@@ -306,18 +309,18 @@
         .ninja-divider-quote {
             text-align: center;
             font-style: italic;
-            color: var(--arc-cyan);
+            color: var(--stark-gold);
             font-size: 0.95rem;
             font-weight: 700;
             margin: 15px 0 8px;
-            text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+            text-shadow: 0 0 10px rgba(255, 183, 0, 0.4);
             letter-spacing: 0.5px;
         }
 
         .info-image {
             width: 100%;
             border-radius: 12px;
-            border: 1px solid rgba(255, 183, 0, 0.3);
+            border: 1px solid rgba(255, 30, 39, 0.3);
             margin-bottom: 20px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.8);
         }
@@ -325,7 +328,7 @@
         .video-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 30px;
         }
 
@@ -355,7 +358,7 @@
         .action-gallery img {
             width: 100%;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             object-fit: cover;
             aspect-ratio: 1;
             box-shadow: 0 5px 15px rgba(0,0,0,0.6);
@@ -371,7 +374,7 @@
         .review-card {
             background: rgba(13, 18, 34, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-left: 4px solid var(--stark-gold);
+            border-left: 4px solid var(--stark-red);
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 15px;
@@ -412,8 +415,8 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(8, 10, 15, 1) 100%);
-            border: 1px solid rgba(255, 183, 0, 0.3);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(6, 8, 13, 1) 100%);
+            border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
             text-align: center;
@@ -444,40 +447,35 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO OTAKU GM -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
-    <!-- BANNER DE OFERTA STARK -->
     <div class="top-banner">
-        ⚡ TECNOLOGIA STARK DE EXIBIÇÃO: APENAS 4 UNIDADES EM ESTOQUE!
+        🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- FUNDOS TECNOLÓGICOS HOLOGRÁFICOS -->
-    <img src="96524.png" class="anime-overlay naruto-1" alt="Fundo Tech 1">
-    <img src="96525.png" class="anime-overlay naruto-2" alt="Fundo Tech 2">
-    <img src="96523.png" class="anime-overlay naruto-3" alt="Fundo Tech 3">
+    <img src="96524.png" class="anime-overlay naruto-1" alt="Atmosfera Fundo 1">
+    <img src="96525.png" class="anime-overlay naruto-2" alt="Atmosfera Fundo 2">
+    <img src="96523.png" class="anime-overlay naruto-3" alt="Atmosfera Fundo 3">
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
         
-        <span class="badge">Stark Industries • Edição Colecionador</span>
-        <h1>Luminária Stark Armor LED</h1>
+        <span class="badge">Art Toys Exclusivo • Stark Edition</span>
+        <h1>Capy Stark Art Toys</h1>
         
         <div class="epic-quote">
-            "Não importa quantos desafios o mundo coloque à sua frente, a inteligência e a inovação sempre vencem." — Tony Stark
+            "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
-        <!-- Palco Principal com as novas fotos de referência -->
         <div class="hero-stage">
-            <img src="20260927_013710_0000.png" alt="Luminária Stark Armor LED com Reator Arc">
+            <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
 
         <div class="price-box">
-            <div class="price-old">De R$ 299,00</div>
-            <div class="price-current">Por R$ 199,00</div>
-            <div class="price-installment">ou 12x de R$ 19,90 no cartão de crédito</div>
+            <div class="price-old">De R$ 289,00</div>
+            <div class="price-current">Por R$ 179,00</div>
+            <div class="price-installment">ou 12x de R$ 17,90 no cartão de crédito</div>
 
             <div class="perks-badge-container">
                 <div class="perk-item">🚚 Frete Grátis Brasil</div>
@@ -487,91 +485,90 @@
             <div class="stock-bar">
                 <div class="stock-progress"></div>
             </div>
-            <div class="stock-text">Restam apenas 4 unidades com Frete Grátis</div>
+            <div class="stock-text">Restam apenas 4 unidades disponíveis</div>
         </div>
 
-        <!-- Botão com o link da Yampi fornecido -->
-        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">GARANTIR MINHA STARK ARMOR</a>
+        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">GARANTIR MEU CAPY STARK</a>
 
-        <h2 class="section-title">Tecnologia Holográfica</h2>
-        <p class="desc-text">Veja o acabamento impecável com detalhes em relevo, pintura metalizada premium e o reator Arc brilhando no peito e na base.</p>
+        <h2 class="section-title">Demonstração em Vídeo</h2>
+        <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
-        <!-- VÍDEOS DE DEMONSTRAÇÃO COM TRANSIÇÕES TECH -->
         <div class="video-grid">
             <div class="video-card">
-                <video src="lv_0_20260924172902.mp4" autoplay muted loop playsinline></video>
+                <video src="100543.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="ninja-divider-quote">💡 "Inteligência artificial avançada integrada ao design de armadura."</div>
+            <div class="ninja-divider-quote">⚙️ "Tecnologia de ponta moldada com armadura de alta precisão."</div>
 
             <div class="video-card">
-                <video src="lv_0_20260924172942.mp4" autoplay muted loop playsinline></video>
+                <video src="100545.mp4" autoplay muted loop playsinline></video>
             </div>
-            <div class="ninja-divider-quote">🛡️ "Ilumine seu setup ou escritório com a tecnologia do Vingador Dourado."</div>
-
-            <div class="video-card">
-                <video src="lv_0_20260924173009.mp4" autoplay muted loop playsinline></video>
-            </div>
-            <div class="ninja-divider-quote">⚡ "Prova de que Tony Stark tem um coração... e muito estilo."</div>
+            <div class="ninja-divider-quote">🔥 "O herói mais fofo e poderoso do universo geek na sua estante!"</div>
         </div>
 
-        <h2 class="section-title">Padrão Stark de Qualidade</h2>
-        <p class="desc-text">Projetado com polímeros de alta resistência, acabamento metalizado automotivo e LEDs de altíssima intensidade para simular a energia do Reator Arc.</p>
+        <h2 class="section-title">Nível Gênios de Detalhes</h2>
+        <p class="desc-text">Fabricado com polímeros de alta resistência, pintura automotiva e peças magnéticas/encaixáveis que transformam a capivara na máquina de combate definitiva.</p>
         
-        <img src="tabela.jpg" class="info-image" alt="Especificações Técnicas do Produto">
+        <img src="100461.jpg" class="info-image" alt="Detalhes do Capy Stark Art Toys">
 
-        <h2 class="section-title">O Poder do Reator Arc</h2>
-        <p class="desc-text">Transforme completamente o visual do seu quarto ou setup geek. Um item indispensável para qualquer fã de quadrinhos e do Universo Marvel.</p>
+        <h2 class="section-title">O Poder na Sua Estante</h2>
+        <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
         <div class="action-gallery">
-            <img src="20260927_013805_0000.png" alt="Stark Armor com laboratório tecnológico ao fundo">
-            <img src="azul.png" alt="Detalhe de Iluminação LED Superior">
-            <img src="branco.png" alt="Detalhe do Reator Frontal">
+            <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
+            <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
+            <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
         <div class="reviews-section">
-            <h2 class="section-title">Avaliações dos Clientes</h2>
+            <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80" alt="Avatar Gabriel" class="review-avatar">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80" alt="Avatar Lucas" class="review-avatar">
                     <div class="review-user-info">
-                        <h4>Gabriel Stark S.</h4>
+                        <h4>Lucas Stark M.</h4>
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
                     </div>
                 </div>
-                <p class="review-text">"Chegou super rápido! O nível de detalhe da pintura e o brilho do LED no escuro são simplesmente espetaculares. Parece uma miniatura de colecionador de cinema!"</p>
+                <p class="review-text">"Cara, que boneco sensacional! A mistura de capivara com o Homem de Ferro ficou genial demais. A qualidade do plástico e da pintura é surreal de boa. Veio super rápido!"</p>
             </div>
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Avatar Camila" class="review-avatar">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Avatar Juliana" class="review-avatar">
                     <div class="review-user-info">
-                        <h4>Camila V.</h4>
+                        <h4>Juliana P.</h4>
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
                     </div>
                 </div>
-                <p class="review-text">"Comprei de presente pro meu irmão e ele pirou! A qualidade do material é excelente e a base iluminada dá um toque futurista incrível no quarto dele."</p>
+                <p class="review-text">"Comprei para enfeitar minha mesa de trabalho e todo mundo que passa pergunta onde eu comprei. É muito bem feito e divertido!"</p>
             </div>
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Renan" class="review-avatar">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Rafael" class="review-avatar">
                     <div class="review-user-info">
-                        <h4>Renan M.</h4>
+                        <h4>Rafael O.</h4>
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
                     </div>
                 </div>
-                <p class="review-text">"Melhor peça geek que já comprei para o meu setup. O acabamento vermelho e dourado brilha muito bem. Recomendo demais!"</p>
+                <p class="review-text">"Nota 10/10! Encaixe perfeito das peças, cores vivas e o design é único. Vale cada centavo investido."</p>
             </div>
         </div>
 
         <div class="guarantee-box">
-            <h3>🔰 GARANTIA STARK DE 30 DIAS</h3>
-            <p>Se você receber o produto e não ficar 100% impressionado com a qualidade do brilho ou do acabamento, devolvemos todo o seu dinheiro sem burocracia.</p>
+            <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
+            <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu dinheiro sem burocracia.</p>
         </div>
 
-        <!-- Botão de Compra Final com o link atualizado -->
         <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">COMPRAR COM DESCONTO AGORA</a>
 
         <footer>
-            <p>🔒 Pagament
+            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
+            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
