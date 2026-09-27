@@ -34,36 +34,18 @@
             position: relative;
         }
 
-        /* PAINÉIS LATERAIS DECORATIVOS: GARANTEM QUE NUNCA SUMAM E FIQUEM BEM VISÍVEIS */
-        .side-armor-left, .side-armor-right {
-            position: absolute;
-            top: 150px;
-            width: 140px;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            gap: 400px;
+        /* FUNDO IMERSIVO FIXO COM AS 3 ARTES DO HOMEM DE FERRO */
+        .bg-fixed-1, .bg-fixed-2, .bg-fixed-3 {
+            position: fixed;
+            z-index: -1;
+            opacity: 0.25;
             pointer-events: none;
+            filter: drop-shadow(0 0 25px rgba(255, 30, 39, 0.8));
         }
 
-        .side-armor-left {
-            left: 5px;
-        }
-
-        .side-armor-right {
-            right: 5px;
-            top: 300px;
-        }
-
-        .side-armor-left img, .side-armor-right img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            opacity: 1; /* 100% visível, zero transparência */
-            border: 2px solid var(--stark-red);
-            box-shadow: 0 0 25px rgba(255, 30, 39, 0.95), 0 0 10px rgba(255, 183, 0, 0.7);
-            background: #000;
-        }
+        .bg-fixed-1 { top: 10vh; left: -40px; width: 280px; transform: rotate(-10deg); }
+        .bg-fixed-2 { top: 45vh; right: -40px; width: 290px; transform: rotate(10deg); }
+        .bg-fixed-3 { bottom: 5vh; left: -40px; width: 280px; transform: rotate(-5deg); }
 
         .cabecalho-loja {
             background-color: #000000;
@@ -119,15 +101,14 @@
             50% { opacity: 0.8; }
         }
 
-        /* CONTAINER CENTRAL OPACO E BEM DESTACADO NO MEIO */
         .container {
-            max-width: 580px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 10;
-            background: #030406;
-            box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.98);
+            background: rgba(4, 6, 10, 0.94);
+            box-shadow: 0 0 40px 30px rgba(0, 0, 0, 0.95);
         }
 
         .badge {
@@ -431,7 +412,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(3, 4, 6, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(4, 6, 10, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -459,34 +440,26 @@
             font-size: 0.85rem;
             color: var(--text-muted);
         }
-
-        /* Oculta as imagens laterais em telas super pequenas de celular para não apertar o texto central, mas mantendo-as visíveis e gigantes em tablets/PC */
-        @media (max-width: 420px) {
-            .side-armor-left, .side-armor-right {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
 
+    <!-- IMAGENS DE FUNDO COM OS NOMES E EXTENSÕES .PNG CORRECTOS -->
+    <img src="20260927_123840_0000.png" class="bg-fixed-1" alt="Fundo Iron 1">
+    <img src="1_20260927_123655_0000.png" class="bg-fixed-2" alt="Fundo Iron 2">
+    <img src="2_20260927_123655_0001.png" class="bg-fixed-3" alt="Fundo Iron 3">
+
+    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
+    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <div class="side-armor-left">
-        <img src="20260927_123840_0000.png" alt="Homem de Ferro Esquerda 1">
-        <img src="2_20260927_123655_0001.png" alt="Homem de Ferro Esquerda 2">
-    </div>
-
-    <div class="side-armor-right">
-        <img src="1_20260927_123655_0000.png" alt="Homem de Ferro Direita 1">
-    </div>
-
+    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -496,6 +469,7 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
+        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -521,6 +495,7 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
+        <!-- VÍDEOS -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -536,17 +511,20 @@
         <h2 class="section-title">Nível Gênios de Detalhes</h2>
         <p class="desc-text">Fabricado com polímeros de alta resistência, pintura automotiva e peças magnéticas/encaixáveis que transformam a capivara na máquina de combate definitiva.</p>
         
+        <!-- IMAGEM CORRIGIDA -->
         <img src="100461.jpg" class="info-image" alt="Detalhes do Capy Stark Art Toys">
 
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
+        <!-- GALERIA COM OS NOMES CERTOS DAS EXTENSÕES -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
+        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
@@ -586,4 +564,17 @@
 
         <div class="guarantee-box">
             <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
-            <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu
+            <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu dinheiro sem burocracia.</p>
+        </div>
+
+        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_blank" class="btn-buy">COMPRAR COM DESCONTO AGORA</a>
+
+        <footer>
+            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
+            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
