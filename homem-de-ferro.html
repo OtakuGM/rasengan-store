@@ -323,24 +323,25 @@
             margin-bottom: 30px;
         }
 
-        /* AJUSTE EXATO PARA O TAMANHO DO VÍDEO SEM BORDAS PRETAS DESNECESSÁRIAS */
+        /* FORMATO QUADRADO PERFEITO EXATO (1:1), SEM SOBRAS OU BORDAS PRETAS */
         .video-card {
             width: 100%;
-            background: transparent;
+            aspect-ratio: 1 / 1;
+            background: #000;
             border: 2px solid var(--stark-gold);
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(255, 183, 0, 0.3);
-            line-height: 0;
+            position: relative;
         }
 
         .video-card video {
             width: 100%;
-            height: auto;
-            max-height: 650px;
-            display: block;
-            object-fit: contain;
-            background: #000;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
             border-radius: 10px;
         }
 
@@ -443,18 +444,22 @@
 </head>
 <body>
 
+    <!-- CABEÇALHO DA LOJA -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
+    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
+    <!-- FUNDOS COM AS SUAS IMAGENS TRANSPARENTES DO HOMEM DE FERRO -->
     <img src="100578.png" class="anime-overlay iron-bg-1" alt="Homem de Ferro Fundo 1">
     <img src="100579.png" class="anime-overlay iron-bg-2" alt="Homem de Ferro Fundo 2">
     <img src="100580.png" class="anime-overlay iron-bg-3" alt="Homem de Ferro Fundo 3">
 
+    <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
         
         <span class="badge">Art Toys Exclusivo • Stark Edition</span>
@@ -464,6 +469,7 @@
             "A união perfeita entre a serenidade da capivara e o intelecto genial de Tony Stark. O colecionável mais épico que você vai ter!"
         </div>
 
+        <!-- Palco Principal -->
         <div class="hero-stage">
             <img src="100462.jpg" alt="Capy Stark Art Toys - Vista Principal">
         </div>
@@ -489,6 +495,7 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja de perto o encaixe perfeito das peças da armadura e a qualidade impecável do acabamento metálico.</p>
         
+        <!-- SEÇÃO DOS 2 VÍDEOS EM FORMATO QUADRADO PERFEITO -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260927120532.mp4" autoplay muted loop playsinline preload="auto"></video>
@@ -509,12 +516,14 @@
         <h2 class="section-title">O Poder na Sua Estante</h2>
         <p class="desc-text">Surpreenda todos os seus amigos com uma peça única de colecionador que mistura humor, fofura e o estilo inconfundível de Tony Stark.</p>
         
+        <!-- Galeria de Imagens -->
         <div class="action-gallery">
             <img src="100578.png" alt="Capy Stark - Visão Completa da Armadura">
             <img src="100579.png" alt="Capy Stark - Detalhe Frontal">
             <img src="100580.png" alt="Capy Stark - Detalhe Lateral">
         </div>
 
+        <!-- AVALIAÇÕES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Colecionadores</h2>
 
