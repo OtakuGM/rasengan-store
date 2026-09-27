@@ -11,7 +11,7 @@
 
     <style>
         :root {
-            --bg-dark: #020305;
+            --bg-dark: #010204;
             --stark-red: #ff1e27;
             --stark-gold: #ffb700;
             --green-success: #00e676;
@@ -34,34 +34,36 @@
             position: relative;
         }
 
-        /* FUNDO IMERSIVO ESPALHADO E BEM VISÍVEL */
+        /* FUNDO SUPER IMERSIVO, NÍTIDO E BEM VISÍVEL NAS LATERAIS */
         .bg-iron-1, .bg-iron-2, .bg-iron-3 {
             position: fixed;
             z-index: -1;
-            opacity: 0.85; /* Bem mais visíveis e nítidas */
+            opacity: 0.95; /* Altíssima visibilidade, nada apagado */
             pointer-events: none;
-            filter: drop-shadow(0 0 25px rgba(255, 30, 39, 0.9));
+            filter: drop-shadow(0 0 35px rgba(255, 30, 39, 0.95)) drop-shadow(0 0 15px rgba(255, 183, 0, 0.6));
         }
 
-        /* Distribuídas estrategicamente para não aglomerar */
+        /* 1. Imagem na Esquerda (Topo) */
         .bg-iron-1 {
-            top: 10vh;
-            left: -20px;
-            width: 290px;
-            transform: rotate(-12deg);
+            top: 12vh;
+            left: -35px;
+            width: 270px;
+            transform: rotate(-10deg);
         }
 
+        /* 2. Imagem na Direita (Meio) */
         .bg-iron-2 {
-            top: 48vh;
-            right: -25px;
-            width: 310px;
+            top: 42vh;
+            right: -35px;
+            width: 280px;
             transform: rotate(10deg);
         }
 
+        /* 3. Imagem na Esquerda (Rodapé) */
         .bg-iron-3 {
-            bottom: 12vh;
-            left: -25px;
-            width: 300px;
+            bottom: 10vh;
+            left: -35px;
+            width: 280px;
             transform: rotate(-5deg);
         }
 
@@ -119,15 +121,15 @@
             50% { opacity: 0.8; }
         }
 
-        /* CONTAINER CENTRAL COM FUNDO SOLIDO PARA O TEXTO FICAR 1 EIN LEGÍVEL */
+        /* CONTAINER CENTRAL COM CONTRASTE IDEAL PARA DEIXAR O TEXTO LEGÍVEL E AS ARTES LATERAIS EVIDENTES */
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px 16px 40px;
             position: relative;
             z-index: 1;
-            background: rgba(2, 3, 5, 0.88);
-            box-shadow: 0 0 70px 45px rgba(2, 3, 5, 0.98);
+            background: rgba(1, 2, 4, 0.91);
+            box-shadow: 0 0 80px 50px rgba(1, 2, 4, 0.98);
         }
 
         .badge {
@@ -431,7 +433,7 @@
         }
 
         .guarantee-box {
-            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(2, 3, 5, 1) 100%);
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(1, 2, 4, 1) 100%);
             border: 1px solid rgba(255, 30, 39, 0.4);
             border-radius: 16px;
             padding: 25px;
@@ -473,10 +475,10 @@
         🔥 EDIÇÃO LIMITADA STARK: APENAS 4 UNIDADES COM FRETE GRÁTIS!
     </div>
 
-    <!-- AS 3 IMAGENS DE FUNDO BEM VISÍVEIS E ESPALHADAS -->
-    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo 1">
-    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo 2">
-    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo 3">
+    <!-- AS 3 IMAGENS DE FUNDO BEM VISÍVEIS, LATERAIS ALTERNADAS E IMERSIVAS -->
+    <img src="20260927_123840_0000.png" class="bg-iron-1" alt="Homem de Ferro Fundo Esquerda">
+    <img src="1_20260927_123655_0000.png" class="bg-iron-2" alt="Homem de Ferro Fundo Direita">
+    <img src="2_20260927_123655_0001.png" class="bg-iron-3" alt="Homem de Ferro Fundo Esquerda Inferior">
 
     <!-- CONTEÚDO DA PÁGINA -->
     <div class="container">
@@ -582,7 +584,4 @@
 
         <div class="guarantee-box">
             <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
-            <p>Se você receber o seu Capy Stark e não ficar 100% apaixonado pela qualidade do Art Toy, devolvemos todo o seu dinheiro sem burocracia.</p>
-        </div>
-
-        <a href="https://autoree.pay.yampi.com.br/pay/6I5K5ESBLW" target="_b
+            <p>Se você receber
