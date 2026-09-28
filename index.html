@@ -36,9 +36,8 @@
             line-height: 1.5;
         }
 
-        /* --- CABEÇALHO OTAKU GM (INTEGRADO, LIMPO E PROPORCIONAL) --- */
         .cabecalho-loja {
-            background-color: #000000; /* Fundo preto puro para fundir com a imagem */
+            background-color: #000000;
             text-align: center;
             padding: 12px 20px;
             width: 100%;
@@ -47,13 +46,12 @@
         }
 
         .cabecalho-loja img {
-            max-width: 150px; /* Tamanho reduzido e profissional */
+            max-width: 150px;
             height: auto;
             display: block;
             margin: 0 auto;
         }
 
-        /* --- BANNER DE OFERTA --- */
         .top-banner {
             background: linear-gradient(90deg, #ff3333, var(--orange-naruto));
             color: #fff;
@@ -70,20 +68,17 @@
             animation: flashText 2s infinite;
         }
 
-        /* Animação de pulsação vibrante para os botões */
         @keyframes pulseGlow {
             0% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
             50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 119, 255, 0.5); }
             100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); }
         }
 
-        /* Animação de piscar para o preço em destaque */
         @keyframes priceFlash {
             0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(0, 230, 118, 0.4); }
             50% { opacity: 0.8; text-shadow: 0 0 25px rgba(0, 240, 255, 0.9); }
         }
 
-        /* Efeito de Raio / Brilho Elétrico na Imagem Principal */
         @keyframes electricStorm {
             0% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.2); border-color: var(--chakra-blue); }
             50% { box-shadow: 0 0 35px rgba(0, 240, 255, 0.9), inset 0 0 25px rgba(255, 255, 255, 0.6); border-color: #ffffff; }
@@ -110,7 +105,6 @@
             box-shadow: 0 0 40px 40px rgba(5, 7, 17, 0.4);
         }
 
-        /* FUNDO FIXO (PARALLAX) - Personagens Imersivos */
         .anime-overlay {
             position: fixed; 
             z-index: -1;
@@ -165,7 +159,6 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Palco Principal com Efeito Elétrico */
         .hero-stage {
             position: relative;
             background: #000;
@@ -196,7 +189,6 @@
             position: relative;
         }
 
-        /* ETIQUETA DE DESCONTO 50% OFF POSICIONADA CORRETAMENTE NO BLOCO */
         .discount-tag {
             position: absolute;
             top: -12px;
@@ -221,7 +213,6 @@
             position: relative;
         }
 
-        /* Preço com Efeito Piscando / Destaque (R$ 139,00) */
         .price-current {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
@@ -236,7 +227,6 @@
             color: var(--text-muted);
         }
 
-        /* Selos de Frete Grátis e Pagamento */
         .perks-badge-container {
             display: flex;
             justify-content: space-around;
@@ -328,7 +318,6 @@
             font-size: 1.05rem;
         }
 
-        /* Frases de Transição Ninja entre os Vídeos */
         .ninja-divider-quote {
             text-align: center;
             font-style: italic;
@@ -470,22 +459,18 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO COM A LOGOMARCA OTAKU GM -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
-    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 OFERTA DE LANÇAMENTO: APENAS 4 UNIDADES EM ESTOQUE!
     </div>
 
-    <!-- FUNDO FIXO (PARALLAX) - Personagens Imersivos -->
     <img src="96524.png" class="anime-overlay naruto-1" alt="Naruto Fundo 1">
     <img src="96525.png" class="anime-overlay naruto-2" alt="Naruto Fundo 2">
     <img src="96523.png" class="anime-overlay naruto-3" alt="Naruto Fundo 3">
 
-    <!-- CONTEÚDO QUE ROLA POR CIMA -->
     <div class="container">
         
         <span class="badge">Acessório Cosplay & Colecionador</span>
@@ -495,7 +480,6 @@
             "Eu não vou fugir, eu nunca volto atrás da minha palavra... Esse é o meu jeito ninja!"
         </div>
 
-        <!-- Palco Principal com Efeito Elétrico -->
         <div class="hero-stage">
             <img src="raios.jpg" alt="Rasen Shuriken LED com Raios">
         </div>
@@ -506,7 +490,6 @@
             <div class="price-current">Por R$ 139,00</div>
             <div class="price-installment">ou 12x de R$ 13,95 no cartão de crédito</div>
 
-            <!-- Selos de Frete e Pagamento -->
             <div class="perks-badge-container">
                 <div class="perk-item">🚚 Frete Grátis Brasil</div>
                 <div class="perk-item">💳 Cartão / PIX</div>
@@ -523,7 +506,6 @@
         <h2 class="section-title">Demonstração em Vídeo</h2>
         <p class="desc-text">Veja o efeito real de rotação e o brilho intenso da lâmina de chakra em funcionamento.</p>
         
-        <!-- SEÇÃO DOS 3 VÍDEOS COM FRASES NINJA SEPARANDO -->
         <div class="video-grid">
             <div class="video-card">
                 <video src="lv_0_20260924172902.mp4" autoplay muted loop playsinline></video>
@@ -555,7 +537,6 @@
             <img src="branco.png" alt="Produto com LED Roxo">
         </div>
 
-        <!-- PROVAS SOCIAIS -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliações dos Shinobis</h2>
 
@@ -583,4 +564,23 @@
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://im
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Matheus" class="review-avatar">
+                    <div class="review-user-info">
+                        <h4>Matheus Uzumaki</h4>
+                        <div class="review-stars">★★★★★ • Compra Verificada</div>
+                    </div>
+                </div>
+                <p class="review-text">"Uso como peça central no meu setup gamer. De noite o quarto fica parecendo um templo ninja kkk. Nota 10/10!"</p>
+            </div>
+        </div>
+
+        <div class="guarantee-box">
+            <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
+            <p>Se você receber o produto e não ficar 100% impressionado com a qualidade do brilho ou do acabamento, devolvemos 100% do seu dinheiro sem perguntas.</p>
+        </div>
+
+        <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy">COMPRAR COM DESCONTO AGORA</a>
+
+        <footer>
+            <p>🔒 Pagamento Processado com Criptografia SSL de 256-bits</p>
+            <p>© 2026 Otaku GM. Todos os direitos reservados.</
