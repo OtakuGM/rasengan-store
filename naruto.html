@@ -66,7 +66,7 @@
             box-shadow: 0 2px 15px rgba(255, 107, 0, 0.4);
         }
 
-        /* ANIMAÇÕES ESPECIAIS E DINÂMICAS */
+        /* ANIMAÇÕES DINÂMICAS E DE CHAKRA */
         @keyframes pulseGlow {
             0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 107, 0, 0.4); }
             50% { transform: scale(1.02); box-shadow: 0 0 45px rgba(255, 107, 0, 0.9), 0 0 70px rgba(255, 136, 0, 0.6); }
@@ -92,6 +92,17 @@
         @keyframes floatEffect {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
+        }
+
+        /* EFEITOS ESPECIAIS DE LUZ DE FUNDO NAS FOTOS */
+        @keyframes classicChakraPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(255, 107, 0, 0.6), 0 0 50px rgba(255, 107, 0, 0.2); border-color: #ff6b00; }
+            50% { box-shadow: 0 0 45px rgba(255, 140, 0, 0.9), 0 0 80px rgba(255, 69, 0, 0.5); border-color: #ffaa00; }
+        }
+
+        @keyframes blackChakraPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(138, 43, 226, 0.6), 0 0 50px rgba(75, 0, 130, 0.3); border-color: #9370db; }
+            50% { box-shadow: 0 0 45px rgba(186, 85, 211, 0.9), 0 0 80px rgba(148, 0, 211, 0.6); border-color: #dda0dd; }
         }
 
         .container {
@@ -147,20 +158,18 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
 
-        /* EFEITO ESPECIAL NAS FOTOS (BRILHO E FLUTUAÇÃO) */
         .immersive-showcase {
             width: 100%;
             border-radius: 14px;
             margin-bottom: 25px;
             border: 2px solid var(--naruto-orange);
-            box-shadow: 0 0 35px rgba(255, 107, 0, 0.5);
+            animation: classicChakraPulse 3s infinite ease-in-out;
             background: #000;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .immersive-showcase:hover {
             transform: scale(1.01);
-            box-shadow: 0 0 50px rgba(255, 136, 0, 0.8);
         }
 
         .version-selector-box {
@@ -238,10 +247,6 @@
             display: block;
             border-radius: 13px;
             transition: transform 0.5s ease;
-        }
-
-        .hero-stage:hover img {
-            transform: scale(1.03);
         }
 
         .mystery-alert {
@@ -398,26 +403,59 @@
             font-size: 1.05rem;
         }
 
-        /* EFEITO ESPECIAL NAS FOTOS DA GALERIA (BRILHO E ZOOM AO TOCAR) */
+        /* EFEITOS ESPECIAIS NAS FOTOS DE PERSONAGENS (CLÁSSICA = LARANJA / BLACK = ROXO AKATSUKI) */
         .gallery-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 30px;
         }
 
-        .gallery-grid img {
+        .photo-card-classic {
             width: 100%;
             border-radius: 14px;
-            border: 2px solid rgba(255, 107, 0, 0.4);
-            box-shadow: 0 0 25px rgba(255, 107, 0, 0.3);
-            transition: all 0.4s ease;
+            padding: 8px;
+            background: rgba(13, 18, 34, 0.8);
+            border: 2px solid #ff6b00;
+            animation: classicChakraPulse 3s infinite ease-in-out;
+            box-shadow: 0 0 30px rgba(255, 107, 0, 0.4);
         }
 
-        .gallery-grid img:hover {
-            transform: scale(1.02);
-            border-color: var(--naruto-orange);
-            box-shadow: 0 0 40px rgba(255, 136, 0, 0.7);
+        .photo-card-classic img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .photo-card-black {
+            width: 100%;
+            border-radius: 14px;
+            padding: 8px;
+            background: rgba(13, 18, 34, 0.8);
+            border: 2px solid #9370db;
+            animation: blackChakraPulse 3s infinite ease-in-out;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+        }
+
+        .photo-card-black img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .photo-card-tech {
+            width: 100%;
+            border-radius: 14px;
+            padding: 8px;
+            background: rgba(13, 18, 34, 0.8);
+            border: 2px solid #00e676;
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.3);
+        }
+
+        .photo-card-tech img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
         }
 
         .reviews-section { margin-bottom: 40px; }
@@ -525,7 +563,7 @@
             "A verdadeira emoção está em abrir a caixa misteriosa sem saber qual lenda você vai despertar!"
         </div>
 
-        <!-- FOTO COM FUNDO PRETO (ITACHI & MADARA - COM EFEITO DE LUZ DE CHAKRA) -->
+        <!-- FOTO COM FUNDO PRETO (COM EFEITO PULSANTE DE CHAKRA) -->
         <img src="7_20260928_001926_0000.png" class="immersive-showcase" alt="Lendas da Vila Oculta da Folha">
 
         <div class="version-selector-box">
@@ -572,108 +610,4 @@
                 </div>
                 
                 <div class="price-box">
-                    <div class="discount-tag">55% OFF</div>
-                    <div class="price-old">De R$ 198,00</div>
-                    <div class="price-current">Por R$ 89,90</div>
-                    <div class="price-installment">ou 12x de R$ 9,02 no cartão de crédito</div>
-
-                    <div class="perks-badge-container">
-                        <div class="perk-item">🚚 Frete Grátis Brasil</div>
-                        <div class="perk-item">📦 Edição Limitada</div>
-                    </div>
-
-                    <div class="stock-bar"><div class="stock-progress" style="width: 12%;"></div></div>
-                    <div class="stock-text">Restam apenas 4 unidades da Edição Black</div>
-                </div>
-
-                <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy" style="background: linear-gradient(135deg, #111 0%, #333 100%); border: 2px solid var(--naruto-orange);">GARANTIR EDIÇÃO BLACK</a>
-            </div>
-        </div>
-
-        <h2 class="section-title">Personagens Possíveis</h2>
-        <p class="desc-text">A emoção é garantida: veja abaixo os modelos lendários que podem calhar na sua caixa surpresa!</p>
-        
-        <div class="gallery-grid">
-            <img src="6_20260928_001848_0005.png" alt="Personagens Possíveis Coleção Clássica com Nomes">
-            <img src="5_20260928_001848_0004.png" alt="Personagens Possíveis Coleção Black com Nomes">
-        </div>
-
-        <!-- SEÇÃO DE TAMANHO TÉCNICO -->
-        <h2 class="section-title">Detalhes & Tamanho Técnico</h2>
-        <p class="desc-text">Perfeitos para estantes e setups: figuras compactas com altíssimo nível de detalhamento e altura variando entre 8cm e 11.5cm.</p>
-        
-        <div class="gallery-grid">
-            <img src="Screenshot_2026-09-27-23-58-59-218_com.shopee.br.png" alt="Tamanho Técnico Coleção Clássica">
-            <img src="Screenshot_2026-09-27-23-58-35-353_com.shopee.br.png" alt="Tamanho Técnico Coleção Black">
-        </div>
-
-        <!-- SEÇÃO DE PROVAS SOCIAIS -->
-        <div class="reviews-section">
-            <h2 class="section-title">Avaliação dos Shinobis</h2>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Rafael Souza</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Comprei 2 caixas e veio o Kakashi e o Itachi! A qualidade do acabamento é impressionante pelo preço. Vale muito a pena a adrenalina de abrir a caixa."</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Camila Ribeiro</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Chegou super rápido em Águas Lindas. Meu irmão amou a Edição Black, o boneco é pesadinho e muito bem feito. Recomendo demais!"</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Bruno" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Bruno "Uchiha" Silva</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Sensacional! A caixa veio lacrada certinho e a ansiedade de abrir pra ver qual boneco vinha é o melhor de tudo. Já quero pedir mais unidades para completar a coleção."</p>
-            </div>
-        </div>
-
-        <div class="guarantee-box">
-            <h3>🔰 GARANTIA DE SATISFAÇÃO OTAKU GM</h3>
-            <p>Se a sua encomenda chegar com qualquer avaria de transporte, efetuamos a troca imediata sem burocracia.</p>
-        </div>
-
-        <footer>
-            <p>🔒 Pagamento 100% Seguro e Processado com Criptografia</p>
-            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
-        </footer>
-
-    </div>
-
-    <script>
-        function switchVersion(version) {
-            const btns = document.querySelectorAll('.version-btn');
-            const contents = document.querySelectorAll('.version-content');
-            
-            btns.forEach(btn => btn.classList.remove('active'));
-            contents.forEach(content => content.classList.remove('active'));
-
-            if(version === 'classic') {
-                btns[0].classList.add('active');
-                document.getElementById('version-classic').classList.add('active');
-            } else {
-                btns[1].classList.add('active');
-                document.getElementById('version-black').classList.add('active');
-            }
-        }
-    </script>
-
-</body>
-</html>
+                    <div class="d
