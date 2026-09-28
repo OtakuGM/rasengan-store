@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -36,7 +35,6 @@
             line-height: 1.5;
         }
 
-        /* --- CABEÇALHO OTAKU GM --- */
         .cabecalho-loja {
             background-color: #000000;
             text-align: center;
@@ -137,7 +135,6 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* --- SELETOR DE VERSÕES (INTERATIVO) --- */
         .version-selector-box {
             background: rgba(13, 18, 34, 0.95);
             border: 2px solid var(--naruto-orange);
@@ -196,7 +193,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Palco Principal com Efeito de Chamas */
         .hero-stage {
             position: relative;
             background: #000;
@@ -235,6 +231,23 @@
             text-align: center;
             margin-bottom: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            position: relative;
+        }
+
+        /* BADGE DE DESCONTO DE 55% */
+        .discount-tag {
+            position: absolute;
+            top: -12px;
+            right: 15px;
+            background: linear-gradient(135deg, #ff3333, #ff6b00);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 900;
+            padding: 5px 12px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(255, 51, 51, 0.5);
+            text-transform: uppercase;
         }
 
         .price-old {
@@ -358,7 +371,6 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.8);
         }
 
-        /* Galeria de Personagens Possíveis */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -458,7 +470,6 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO COM A LOGOMARCA OTAKU GM -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
@@ -467,7 +478,6 @@
         🔥 QUEIMA DE ESTOQUE NINJA: FRETE GRÁTIS PARA TODO O BRASIL!
     </div>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
         
         <span class="badge">Caixa Surpresa • Colecionáveis Oficiais</span>
@@ -477,7 +487,6 @@
             "A verdadeira emoção está em abrir a caixa misteriosa sem saber qual lenda você vai despertar!"
         </div>
 
-        <!-- SELETOR INTERATIVO DE VERSÕES (CLÁSSICA VS BLACK) -->
         <div class="version-selector-box">
             <div class="version-title">⚡ Escolha sua Coleção:</div>
             <div class="version-tabs">
@@ -485,7 +494,7 @@
                 <button class="version-btn" onclick="switchVersion('black')">Coleção Black 🥷</button>
             </div>
 
-            <!-- CONTEÚDO VERSÃO CLÁSSICA -->
+            <!-- VERSÃO CLÁSSICA (FOTO 1) -->
             <div id="version-classic" class="version-content active">
                 <div class="hero-stage">
                     <img src="1_20260928_001847_0000.png" alt="Caixa Surpresa Coleção Clássica Naruto">
@@ -495,6 +504,7 @@
                 </div>
                 
                 <div class="price-box">
+                    <div class="discount-tag">55% OFF</div>
                     <div class="price-old">De R$ 198,00</div>
                     <div class="price-current">Por R$ 89,90</div>
                     <div class="price-installment">ou 12x de R$ 9,02 no cartão de crédito</div>
@@ -508,11 +518,10 @@
                     <div class="stock-text">Restam apenas 6 caixas com Frete Grátis</div>
                 </div>
 
-                <!-- LINK DE CHECKOUT DA VERSÃO CLÁSSICA (Substitua pelo link Yampi correto se necessário) -->
                 <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy">GARANTIR COLEÇÃO CLÁSSICA</a>
             </div>
 
-            <!-- CONTEÚDO VERSÃO BLACK -->
+            <!-- VERSÃO BLACK (FOTO 2) -->
             <div id="version-black" class="version-content">
                 <div class="hero-stage">
                     <img src="2_20260928_001847_0001.png" alt="Caixa Surpresa Coleção Black Naruto">
@@ -522,6 +531,7 @@
                 </div>
                 
                 <div class="price-box">
+                    <div class="discount-tag">55% OFF</div>
                     <div class="price-old">De R$ 198,00</div>
                     <div class="price-current">Por R$ 89,90</div>
                     <div class="price-installment">ou 12x de R$ 9,02 no cartão de crédito</div>
@@ -535,7 +545,6 @@
                     <div class="stock-text">Restam apenas 4 unidades da Edição Black</div>
                 </div>
 
-                <!-- LINK DE CHECKOUT DA VERSÃO BLACK (Substitua pelo link Yampi específico da Black se tiver) -->
                 <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy" style="background: linear-gradient(135deg, #111 0%, #333 100%); border: 2px solid var(--naruto-orange);">GARANTIR EDIÇÃO BLACK</a>
             </div>
         </div>
@@ -554,7 +563,6 @@
         
         <img src="6_20260928_001848_0005.png" class="info-image" alt="Especificações dos Action Figures">
 
-        <!-- AVALIAÇÕES DOS CLIENTES -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Shinobis</h2>
 
@@ -577,4 +585,4 @@
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
                     </div>
                 </div>
-                <p class="review-text">"Chegou super rápido em Águas Lindas. Meu irmão amou a Edição Black
+                <p class="review-text">"Ch
