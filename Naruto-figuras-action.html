@@ -1,1 +1,580 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Box Action Figures Naruto | Otaku GM</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #050711;
+            --naruto-orange: #ff6b00;
+            --naruto-glow: #ff8800;
+            --black-card: #0d1222;
+            --text-main: #f0f4f8;
+            --text-muted: #94a3b8;
+            --green-success: #00e676;
+            --red-sale: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* --- CABEÇALHO OTAKU GM --- */
+        .cabecalho-loja {
+            background-color: #000000;
+            text-align: center;
+            padding: 12px 20px;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .cabecalho-loja img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .top-banner {
+            background: linear-gradient(90deg, #ff3333, var(--naruto-orange));
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(255, 107, 0, 0.4);
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 107, 0, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(255, 107, 0, 0.8), 0 0 60px rgba(255, 136, 0, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 107, 0, 0.4); }
+        }
+
+        @keyframes priceFlash {
+            0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(0, 230, 118, 0.4); }
+            50% { opacity: 0.8; text-shadow: 0 0 25px rgba(255, 107, 0, 0.9); }
+        }
+
+        @keyframes flameBorder {
+            0% { box-shadow: 0 0 15px rgba(255, 107, 0, 0.4), inset 0 0 15px rgba(255, 107, 0, 0.2); border-color: var(--naruto-orange); }
+            50% { box-shadow: 0 0 35px rgba(255, 136, 0, 0.9), inset 0 0 25px rgba(255, 255, 255, 0.6); border-color: #ffffff; }
+            100% { box-shadow: 0 0 15px rgba(255, 107, 0, 0.4), inset 0 0 15px rgba(255, 107, 0, 0.2); border-color: var(--naruto-orange); }
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+            position: relative;
+            z-index: 1;
+            background: rgba(5, 7, 17, 0.4);
+            box-shadow: 0 0 40px 40px rgba(5, 7, 17, 0.4);
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 107, 0, 0.1);
+            border: 1px solid var(--naruto-orange);
+            color: var(--naruto-orange);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
+        }
+
+        h1, .section-title { text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #ffffff 0%, var(--naruto-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .epic-quote {
+            font-style: italic;
+            font-weight: 600;
+            color: #ffd700;
+            border-left: 3px solid #ffd700;
+            padding-left: 10px;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* --- SELETOR DE VERSÕES (INTERATIVO) --- */
+        .version-selector-box {
+            background: rgba(13, 18, 34, 0.95);
+            border: 2px solid var(--naruto-orange);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .version-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .version-tabs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .version-btn {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 12px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .version-btn.active {
+            border-color: var(--naruto-orange);
+            background: rgba(255, 107, 0, 0.15);
+            box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+        }
+
+        .version-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .version-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Palco Principal com Efeito de Chamas */
+        .hero-stage {
+            position: relative;
+            background: #000;
+            border: 3px solid var(--naruto-orange);
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: flameBorder 2.5s infinite ease-in-out;
+            overflow: hidden;
+        }
+
+        .hero-stage img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 13px;
+        }
+
+        .mystery-alert {
+            background: rgba(255, 107, 0, 0.15);
+            border: 1px dashed var(--naruto-orange);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffaa00;
+        }
+
+        .price-box {
+            background: rgba(13, 18, 34, 0.95);
+            border: 1px solid rgba(255, 107, 0, 0.4);
+            border-radius: 16px;
+            padding: 22px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+        }
+
+        .price-old {
+            font-size: 1.15rem;
+            color: var(--red-sale);
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+
+        .price-current {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.3rem;
+            color: var(--green-success);
+            font-weight: 900;
+            margin: 5px 0;
+            animation: priceFlash 1.5s infinite ease-in-out;
+        }
+
+        .price-installment {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .perks-badge-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+            background: rgba(255, 107, 0, 0.05);
+            border: 1px dashed rgba(255, 107, 0, 0.3);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .perk-item {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--naruto-orange);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .stock-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 12px;
+            margin: 15px auto 8px;
+            width: 85%;
+            overflow: hidden;
+        }
+
+        .stock-progress {
+            background: linear-gradient(90deg, var(--naruto-orange), #ff3333);
+            height: 100%;
+            width: 18%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff3333;
+        }
+
+        .stock-text {
+            font-size: 0.85rem;
+            color: #ffaa00;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--naruto-orange) 0%, #ff3333 100%);
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 14px;
+            animation: pulseGlow 2s infinite ease-in-out;
+            transition: all 0.2s ease;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            box-shadow: 0 5px 20px rgba(255, 107, 0, 0.6);
+        }
+
+        .btn-buy:active { transform: scale(0.98); }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 5px;
+            height: 22px;
+            background: var(--naruto-orange);
+            box-shadow: 0 0 10px var(--naruto-orange);
+        }
+
+        .desc-text {
+            color: #e2e8f0;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.9);
+            font-size: 1.05rem;
+        }
+
+        .info-image {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+        }
+
+        /* Galeria de Personagens Possíveis */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            object-fit: cover;
+            aspect-ratio: 1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+        }
+
+        .gallery-grid img:first-child {
+            grid-column: 1 / -1;
+            aspect-ratio: 16/9;
+        }
+
+        .reviews-section { margin-bottom: 40px; }
+
+        .review-card {
+            background: rgba(13, 18, 34, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid var(--naruto-orange);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--naruto-orange);
+        }
+
+        .review-user-info h4 {
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .review-stars {
+            color: #ffd700;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: #d1d5db;
+            margin-bottom: 12px;
+        }
+
+        .guarantee-box {
+            background: linear-gradient(180deg, rgba(13, 18, 34, 0.95) 0%, rgba(5, 7, 17, 1) 100%);
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+        }
+
+        .guarantee-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--naruto-orange);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .guarantee-box p {
+            font-size: 0.95rem;
+            color: #d1d5db;
+        }
+
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO COM A LOGOMARCA OTAKU GM -->
+    <header class="cabecalho-loja">
+        <img src="98913.png" alt="Logomarca Otaku GM">
+    </header>
+
+    <div class="top-banner">
+        🔥 QUEIMA DE ESTOQUE NINJA: FRETE GRÁTIS PARA TODO O BRASIL!
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="container">
+        
+        <span class="badge">Caixa Surpresa • Colecionáveis Oficiais</span>
+        <h1>Mystery Box Action Figures Naruto</h1>
+        
+        <div class="epic-quote">
+            "A verdadeira emoção está em abrir a caixa misteriosa sem saber qual lenda você vai despertar!"
+        </div>
+
+        <!-- SELETOR INTERATIVO DE VERSÕES (CLÁSSICA VS BLACK) -->
+        <div class="version-selector-box">
+            <div class="version-title">⚡ Escolha sua Coleção:</div>
+            <div class="version-tabs">
+                <button class="version-btn active" onclick="switchVersion('classic')">Coleção Clássica</button>
+                <button class="version-btn" onclick="switchVersion('black')">Coleção Black 🥷</button>
+            </div>
+
+            <!-- CONTEÚDO VERSÃO CLÁSSICA -->
+            <div id="version-classic" class="version-content active">
+                <div class="hero-stage">
+                    <img src="1_20260928_001847_0000.png" alt="Caixa Surpresa Coleção Clássica Naruto">
+                </div>
+                <div class="mystery-alert">
+                    📦 Cada caixa contém 1 boneco surpresa aleatório da Coleção Clássica! Colecione todos!
+                </div>
+                
+                <div class="price-box">
+                    <div class="price-old">De R$ 198,00</div>
+                    <div class="price-current">Por R$ 89,90</div>
+                    <div class="price-installment">ou 12x de R$ 9,02 no cartão de crédito</div>
+
+                    <div class="perks-badge-container">
+                        <div class="perk-item">🚚 Frete Grátis Brasil</div>
+                        <div class="perk-item">📦 Envio Imediato</div>
+                    </div>
+
+                    <div class="stock-bar"><div class="stock-progress"></div></div>
+                    <div class="stock-text">Restam apenas 6 caixas com Frete Grátis</div>
+                </div>
+
+                <!-- LINK DE CHECKOUT DA VERSÃO CLÁSSICA (Substitua pelo link Yampi correto se necessário) -->
+                <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy">GARANTIR COLEÇÃO CLÁSSICA</a>
+            </div>
+
+            <!-- CONTEÚDO VERSÃO BLACK -->
+            <div id="version-black" class="version-content">
+                <div class="hero-stage">
+                    <img src="2_20260928_001847_0001.png" alt="Caixa Surpresa Coleção Black Naruto">
+                </div>
+                <div class="mystery-alert">
+                    🖤 Edição Limitada Black: Acabamento fosco exclusivo com personagens lendários! 1 boneco surpresa por caixa.
+                </div>
+                
+                <div class="price-box">
+                    <div class="price-old">De R$ 198,00</div>
+                    <div class="price-current">Por R$ 89,90</div>
+                    <div class="price-installment">ou 12x de R$ 9,02 no cartão de crédito</div>
+
+                    <div class="perks-badge-container">
+                        <div class="perk-item">🚚 Frete Grátis Brasil</div>
+                        <div class="perk-item">📦 Edição Limitada</div>
+                    </div>
+
+                    <div class="stock-bar"><div class="stock-progress" style="width: 12%;"></div></div>
+                    <div class="stock-text">Restam apenas 4 unidades da Edição Black</div>
+                </div>
+
+                <!-- LINK DE CHECKOUT DA VERSÃO BLACK (Substitua pelo link Yampi específico da Black se tiver) -->
+                <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy" style="background: linear-gradient(135deg, #111 0%, #333 100%); border: 2px solid var(--naruto-orange);">GARANTIR EDIÇÃO BLACK</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Personagens Possíveis</h2>
+        <p class="desc-text">A emoção é garantida: o fator surpresa significa que você pode tirar o seu ninja favorito na primeira tentativa!</p>
+        
+        <div class="gallery-grid">
+            <img src="3_20260928_001848_0002.png" alt="Personagens da Coleção">
+            <img src="4_20260928_001848_0003.png" alt="Detalhe dos bonecos">
+            <img src="5_20260928_001848_0004.png" alt="Modelos disponíveis">
+        </div>
+
+        <h2 class="section-title">Detalhes de Colecionador</h2>
+        <p class="desc-text">Feitos em material PVC de alta durabilidade, pintura rica em detalhes e base inclusa para manter sua figura firme no setup ou prateleira.</p>
+        
+        <img src="6_20260928_001848_0005.png" class="info-image" alt="Especificações dos Action Figures">
+
+        <!-- AVALIAÇÕES DOS CLIENTES -->
+        <div class="reviews-section">
+            <h2 class="section-title">Avaliação dos Shinobis</h2>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="review-avatar">
+                    <div class="review-user-info">
+                        <h4>Rafael Souza</h4>
+                        <div class="review-stars">★★★★★ • Compra Verificada</div>
+                    </div>
+                </div>
+                <p class="review-text">"Comprei 2 caixas e veio o Kakashi e o Itachi! A qualidade do acabamento é impressionante pelo preço. Vale muito a pena a adrenalina de abrir a caixa."</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="review-avatar">
+                    <div class="review-user-info">
+                        <h4>Camila Ribeiro</h4>
+                        <div class="review-stars">★★★★★ • Compra Verificada</div>
+                    </div>
+                </div>
+                <p class="review-text">"Chegou super rápido em Águas Lindas. Meu irmão amou a Edição Black
