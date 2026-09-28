@@ -72,6 +72,12 @@
             100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 107, 0, 0.4); }
         }
 
+        /* EFEITO ESPECIAL DE CHAKRA IMERSIVO NO TÍTULO */
+        @keyframes chakraTextGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 107, 0, 0.6), 0 0 20px rgba(255, 107, 0, 0.4); }
+            50% { text-shadow: 0 0 20px rgba(255, 136, 0, 0.9), 0 0 35px rgba(255, 107, 0, 0.8), 0 0 50px rgba(255, 255, 255, 0.4); }
+        }
+
         @keyframes priceFlash {
             0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(0, 230, 118, 0.4); }
             50% { opacity: 0.8; text-shadow: 0 0 25px rgba(255, 107, 0, 0.9); }
@@ -108,8 +114,6 @@
             box-shadow: 0 0 10px rgba(255, 107, 0, 0.2);
         }
 
-        h1, .section-title { text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9); }
-
         h1 {
             font-family: 'Orbitron', sans-serif;
             font-size: 2rem;
@@ -119,6 +123,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 12px;
+            animation: chakraTextGlow 3s infinite ease-in-out;
         }
 
         .epic-quote {
@@ -127,12 +132,22 @@
             color: #ffd700;
             border-left: 3px solid #ffd700;
             padding-left: 10px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 1.1rem;
             background: rgba(0, 0, 0, 0.6);
             padding: 12px;
             border-radius: 0 8px 8px 0;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        /* ESTILO PARA A FOTO COM FUNDO PRETO (TRANSPARENTE / IMERSIVA) */
+        .immersive-showcase {
+            width: 100%;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 107, 0, 0.4);
+            box-shadow: 0 0 30px rgba(255, 107, 0, 0.25);
+            background: #000;
         }
 
         .version-selector-box {
@@ -342,6 +357,7 @@
             align-items: center;
             gap: 10px;
             margin-top: 30px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
         }
 
         .section-title::before {
@@ -471,11 +487,16 @@
     <div class="container">
         
         <span class="badge">Caixa Surpresa • Colecionáveis Oficiais</span>
+        
+        <!-- TÍTULO COM EFEITO DE CHAKRA IMERSIVO -->
         <h1>Mystery Box Action Figures Naruto</h1>
         
         <div class="epic-quote">
             "A verdadeira emoção está em abrir a caixa misteriosa sem saber qual lenda você vai despertar!"
         </div>
+
+        <!-- FOTO COM FUNDO PRETO (ITACHI & MADARA - FUNDO TRANSPARENTE / IMERSIVO) -->
+        <img src="101225.png" class="immersive-showcase" alt="Lendas da Vila Oculta da Folha">
 
         <div class="version-selector-box">
             <div class="version-title">⚡ Escolha sua Coleção:</div>
@@ -539,24 +560,24 @@
             </div>
         </div>
 
-        <!-- SEÇÃO CORRETA: PERSONAGENS POSSÍVEIS (COLEÇÃO CLÁSSICA & BLACK) -->
         <h2 class="section-title">Personagens Possíveis</h2>
-        <p class="desc-text">A emoção é garantida: veja abaixo os modelos que podem calhar na sua caixa surpresa!</p>
+        <p class="desc-text">A emoção é garantida: veja abaixo os modelos lendários que podem calhar na sua caixa surpresa!</p>
         
         <div class="gallery-grid">
-            <img src="6_20260928_001848_0005.png" alt="Personagens Possíveis Coleção Clássica com Nomes">
-            <img src="5_20260928_001848_0004.png" alt="Personagens Possíveis Coleção Black com Nomes">
+            <img src="6_20260928_001848_0001.png" alt="Personagens Possíveis Coleção Clássica com Nomes">
+            <img src="5_20260928_001848_0000.png" alt="Personagens Possíveis Coleção Black com Nomes">
         </div>
 
-        <!-- SEÇÃO ABAIXO: DETALHES DE COLETECIONADOR / FOTOS DAS CAIXAS -->
-        <h2 class="section-title">Detalhes de Colecionador</h2>
-        <p class="desc-text">Feitos em material PVC de alta durabilidade, pintura rica em detalhes e base inclusa para manter sua figura firme no setup ou prateleira.</p>
+        <!-- SEÇÃO COM AS ESPECIFICAÇÕES TÉCNICAS E TAMANHOS -->
+        <h2 class="section-title">Detalhes & Tamanho Técnico</h2>
+        <p class="desc-text">Perfeitos para estantes e setups: figuras compactas com altíssimo nível de detalhamento e altura variando entre 8cm e 11.5cm.</p>
         
         <div class="gallery-grid">
-            <img src="3_20260928_001848_0002.png" alt="Detalhe da Caixa Clássica">
-            <img src="4_20260928_001848_0003.png" alt="Detalhe da Caixa Black">
+            <img src="3_20260928_001847_0001.png" alt="Tamanho Técnico Coleção Clássica">
+            <img src="4_20260928_001847_0002.png" alt="Tamanho Técnico Coleção Black">
         </div>
 
+        <!-- SEÇÃO DE PROVAS SOCIAIS (AGORA COM 3 AVALIAÇÕES) -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Shinobis</h2>
 
@@ -564,54 +585,4 @@
                 <div class="review-header">
                     <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="review-avatar">
                     <div class="review-user-info">
-                        <h4>Rafael Souza</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Comprei 2 caixas e veio o Kakashi e o Itachi! A qualidade do acabamento é impressionante pelo preço. Vale muito a pena a adrenalina de abrir a caixa."</p>
-            </div>
-
-            <div class="review-card">
-                <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80" alt="Avatar" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Camila Ribeiro</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Chegou super rápido em Águas Lindas. Meu irmão amou a Edição Black, o boneco é pesadinho e muito bem feito. Recomendo demais!"</p>
-            </div>
-        </div>
-
-        <div class="guarantee-box">
-            <h3>🔰 GARANTIA DE SATISFAÇÃO OTAKU GM</h3>
-            <p>Se a sua encomenda chegar com qualquer avaria de transporte, efetuamos a troca imediata sem burocracia.</p>
-        </div>
-
-        <footer>
-            <p>🔒 Pagamento 100% Seguro e Processado com Criptografia</p>
-            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
-        </footer>
-
-    </div>
-
-    <script>
-        function switchVersion(version) {
-            const btns = document.querySelectorAll('.version-btn');
-            const contents = document.querySelectorAll('.version-content');
-            
-            btns.forEach(btn => btn.classList.remove('active'));
-            contents.forEach(content => content.classList.remove('active'));
-
-            if(version === 'classic') {
-                btns[0].classList.add('active');
-                document.getElementById('version-classic').classList.add('active');
-            } else {
-                btns[1].classList.add('active');
-                document.getElementById('version-black').classList.add('active');
-            }
-        }
-    </script>
-
-</body>
-</html>
+                      
