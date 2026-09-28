@@ -51,7 +51,6 @@
             height: auto;
             display: block;
             margin: 0 auto;
-            /* Sem filtros ou neon para um visual totalmente clean e integrado */
         }
 
         /* --- BANNER DE OFERTA --- */
@@ -94,6 +93,11 @@
         @keyframes flashText {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
+        }
+
+        @keyframes floatEffect {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
 
         .container {
@@ -161,7 +165,7 @@
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
-        /* Palco com Efeito de Raio Elétrico Animado na Borda */
+        /* Palco Principal com Efeito Elétrico */
         .hero-stage {
             position: relative;
             background: #000;
@@ -189,6 +193,24 @@
             margin-bottom: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(8px);
+            position: relative;
+        }
+
+        /* ETIQUETA DE DESCONTO 50% OFF POSICIONADA CORRETAMENTE NO BLOCO */
+        .discount-tag {
+            position: absolute;
+            top: -12px;
+            right: 15px;
+            background: linear-gradient(135deg, #0055ff, var(--chakra-blue));
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 900;
+            padding: 5px 12px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.7);
+            text-transform: uppercase;
+            animation: floatEffect 2s infinite ease-in-out;
         }
 
         .price-old {
@@ -199,7 +221,7 @@
             position: relative;
         }
 
-        /* Preço com Efeito Piscando / Destaque */
+        /* Preço com Efeito Piscando / Destaque (R$ 139,00) */
         .price-current {
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
@@ -448,12 +470,12 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO COM A LOGOMARCA OTAKU GM (AGORA NO TOPO ABSOLUTO) -->
+    <!-- CABEÇALHO COM A LOGOMARCA OTAKU GM -->
     <header class="cabecalho-loja">
         <img src="98913.png" alt="Logomarca Otaku GM">
     </header>
 
-    <!-- BANNER DE OFERTA (AGORA ABAIXO DA LOGO) -->
+    <!-- BANNER DE OFERTA -->
     <div class="top-banner">
         🔥 OFERTA DE LANÇAMENTO: APENAS 4 UNIDADES EM ESTOQUE!
     </div>
@@ -479,9 +501,10 @@
         </div>
 
         <div class="price-box">
+            <div class="discount-tag">50% OFF</div>
             <div class="price-old">De R$ 279,00</div>
-            <div class="price-current">Por R$ 189,00</div>
-            <div class="price-installment">ou 12x de R$ 18,97 no cartão de crédito</div>
+            <div class="price-current">Por R$ 139,00</div>
+            <div class="price-installment">ou 12x de R$ 13,95 no cartão de crédito</div>
 
             <!-- Selos de Frete e Pagamento -->
             <div class="perks-badge-container">
@@ -532,7 +555,7 @@
             <img src="branco.png" alt="Produto com LED Roxo">
         </div>
 
-        <!-- PROVAS SOCIAIS (Exatamente 3, sem fotos da cliente) -->
+        <!-- PROVAS SOCIAIS -->
         <div class="reviews-section">
             <h2 class="section-title">Avaliações dos Shinobis</h2>
 
@@ -560,16 +583,4 @@
 
             <div class="review-card">
                 <div class="review-header">
-                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150&auto=format&fit=crop&q=80" alt="Avatar Matheus" class="review-avatar">
-                    <div class="review-user-info">
-                        <h4>Matheus Uzumaki</h4>
-                        <div class="review-stars">★★★★★ • Compra Verificada</div>
-                    </div>
-                </div>
-                <p class="review-text">"Uso como peça central no meu setup gamer. De noite o quarto fica parecendo um templo ninja kkk. Nota 10/10!"</p>
-            </div>
-        </div>
-
-        <div class="guarantee-box">
-            <h3>🔰 GARANTIA DE SATISFAÇÃO DE 30 DIAS</h3>
-            <p>Se você receber o produto e n
+                    <img src="https://im
