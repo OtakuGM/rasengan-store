@@ -370,23 +370,16 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            grid-template-columns: 1fr;
+            gap: 15px;
             margin-bottom: 30px;
         }
 
         .gallery-grid img {
             width: 100%;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
-            object-fit: cover;
-            aspect-ratio: 1;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 107, 0, 0.3);
             box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-        }
-
-        .gallery-grid img:first-child {
-            grid-column: 1 / -1;
-            aspect-ratio: 16/9;
         }
 
         .reviews-section { margin-bottom: 40px; }
@@ -518,7 +511,7 @@
                 <a href="https://autoree.pay.yampi.com.br/pay/WH8GMLHIXG" target="_blank" class="btn-buy">GARANTIR COLEÇÃO CLÁSSICA</a>
             </div>
 
-            <!-- VERSÃO BLACK (COM A FOTO CORRETA) -->
+            <!-- VERSÃO BLACK -->
             <div id="version-black" class="version-content">
                 <div class="hero-stage">
                     <img src="2_20260928_001847_0001.png" alt="Caixa Surpresa Coleção Black Naruto">
@@ -546,19 +539,23 @@
             </div>
         </div>
 
+        <!-- SEÇÃO CORRETA: PERSONAGENS POSSÍVEIS (COLEÇÃO CLÁSSICA & BLACK) -->
         <h2 class="section-title">Personagens Possíveis</h2>
-        <p class="desc-text">A emoção é garantida: o fator surpresa significa que você pode tirar o seu ninja favorito na primeira tentativa!</p>
+        <p class="desc-text">A emoção é garantida: veja abaixo os modelos que podem calhar na sua caixa surpresa!</p>
         
         <div class="gallery-grid">
-            <img src="3_20260928_001848_0002.png" alt="Personagens da Coleção">
-            <img src="4_20260928_001848_0003.png" alt="Detalhe dos bonecos">
-            <img src="5_20260928_001848_0004.png" alt="Modelos disponíveis">
+            <img src="6_20260928_001848_0005.png" alt="Personagens Possíveis Coleção Clássica com Nomes">
+            <img src="5_20260928_001848_0004.png" alt="Personagens Possíveis Coleção Black com Nomes">
         </div>
 
+        <!-- SEÇÃO ABAIXO: DETALHES DE COLETECIONADOR / FOTOS DAS CAIXAS -->
         <h2 class="section-title">Detalhes de Colecionador</h2>
         <p class="desc-text">Feitos em material PVC de alta durabilidade, pintura rica em detalhes e base inclusa para manter sua figura firme no setup ou prateleira.</p>
         
-        <img src="6_20260928_001848_0005.png" class="info-image" alt="Especificações dos Action Figures">
+        <div class="gallery-grid">
+            <img src="3_20260928_001848_0002.png" alt="Detalhe da Caixa Clássica">
+            <img src="4_20260928_001848_0003.png" alt="Detalhe da Caixa Black">
+        </div>
 
         <div class="reviews-section">
             <h2 class="section-title">Avaliação dos Shinobis</h2>
@@ -582,4 +579,39 @@
                         <div class="review-stars">★★★★★ • Compra Verificada</div>
                     </div>
                 </div>
-                <p class="review-text">"Chegou super rápido em Águas Lindas. Meu irmão amou a Edição Black, o boneco é pesadinho e 
+                <p class="review-text">"Chegou super rápido em Águas Lindas. Meu irmão amou a Edição Black, o boneco é pesadinho e muito bem feito. Recomendo demais!"</p>
+            </div>
+        </div>
+
+        <div class="guarantee-box">
+            <h3>🔰 GARANTIA DE SATISFAÇÃO OTAKU GM</h3>
+            <p>Se a sua encomenda chegar com qualquer avaria de transporte, efetuamos a troca imediata sem burocracia.</p>
+        </div>
+
+        <footer>
+            <p>🔒 Pagamento 100% Seguro e Processado com Criptografia</p>
+            <p>© 2026 Otaku GM. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function switchVersion(version) {
+            const btns = document.querySelectorAll('.version-btn');
+            const contents = document.querySelectorAll('.version-content');
+            
+            btns.forEach(btn => btn.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            if(version === 'classic') {
+                btns[0].classList.add('active');
+                document.getElementById('version-classic').classList.add('active');
+            } else {
+                btns[1].classList.add('active');
+                document.getElementById('version-black').classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
